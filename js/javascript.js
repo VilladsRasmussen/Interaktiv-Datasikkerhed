@@ -68,3 +68,11 @@ function sayThanks(name) {
   
   console.log(numOfMonitors);
   
+  const rectangleArea = (width, height) => {
+    let area = width * height;
+    return area;
+  };
+
+  const squareNum = num => num * num;
+
+  const plantNeedsWater = day => day === 'Wednesday' ? true : false;
