@@ -1,5 +1,48 @@
-body {
-  background: #131928;
+@use 'partial';
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: partial.$btn-and-text-color;
+  font-family: partial.$primary-font;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+body {
+  background: #131928;
+  height: 100vh;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+.button {
+  @include partial.btn();
+}
+
+section {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
 }

@@ -1,5 +1,58 @@
-body {
-  background: #131928;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #ffffff;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+body {
+  background: #131928;
+  height: 100vh;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+.button {
+  width: 70%;
+  height: 60px;
+  -webkit-clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0 100%);
+          clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0 100%);
+  background: #ffffff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: "Jersey 10", sans-serif;
+  color: black;
+}
+
+section {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
 }/*# sourceMappingURL=style.css.map */
