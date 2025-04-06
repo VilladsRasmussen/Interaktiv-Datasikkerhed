@@ -86,3 +86,10 @@ function sayThanks(name) {
   const squareNum = num => num * num;
 
   const plantNeedsWater = day => day === 'Wednesday' ? true : false;
+
+  let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle']; // Laver lister
+
+  
+
+
+
