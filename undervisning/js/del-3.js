@@ -64,14 +64,27 @@ if (isSunny) {
 
 
 let dice;
-dice = 6; // Variabel med tal
+dice = Math.floor(Math.random() * 6) + 1; // Variabel med tal
 // Den anden er ikke blevet læst, den er barev blevet overskrevet
+// Floor afrunder tal til det nærmeste heltal.
+// Random generere et tilfældigt tal mellem 0 og 1. Det ganges med 6 for at ligne en terning.
 
 switch(dice) {
-    case 1: console.log("You rolled a 1!"); break; //output: You rolled a 1!
-    case 2: console.log("You rolled a 2!"); break; //output: You rolled a 2!
-    case 3: console.log("You rolled a 3!"); break; //output: You rolled a 3!
-    case 4: console.log("You rolled a 4!"); break; //output: You rolled a 4!
-    case 5: console.log("You rolled a 5!"); break; //output: You rolled a 5!
-    case 6: console.log("You rolled a 6!"); break; //output: You rolled a 6!
+    case 1: console.log("You rolled a 1!"); 
+    break; //output: You rolled a 1!
+    case 2: console.log("You rolled a 2!"); 
+    break; //output: You rolled a 2!
+    case 3: console.log("You rolled a 3!"); 
+    break; //output: You rolled a 3!
+    case 4: console.log("You rolled a 4!"); 
+    break; //output: You rolled a 4!
+    case 5: console.log("You rolled a 5!"); 
+    break; //output: You rolled a 5!
+    case 6: console.log("You rolled a 6!"); 
+    break; //output: You rolled a 6!
+    default: console.log("Invalid roll!"); //output: Invalid roll!
 }
+//Opsætter man dem sådan her giver det en bedre syntaks.
+
+
+

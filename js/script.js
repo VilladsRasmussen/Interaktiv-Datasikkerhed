@@ -31,3 +31,35 @@ function vurderAdgangskode(strofe) {
         return 'God';
     }
 }
+
+// button example
+
+const c1 = document.querySelector('#c1');
+const c2 = document.querySelector('#c2');
+const c3 = document.querySelector('#c3');
+
+const checkAnswer = (e) => { // e 
+    console.log(e.target);
+    
+    if (e.target.id === 'c1') {
+        console.log('That is correct!');
+    } else {
+        console.log('That is wrong!')
+    }
+}
+
+/* const checkAnswer = (e) => { // e 
+    console.log(e.target);
+    
+    if (e.target.id !== 'c1') {
+        console.log('That is correct!');
+    } else {
+        console.log('That is wrong!')
+    }
+}
+
+*/
+
+c1.addEventListener('click', checkAnswer);
+c2.addEventListener('click', checkAnswer);
+c3.addEventListener('click', checkAnswer);
