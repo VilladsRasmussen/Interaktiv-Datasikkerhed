@@ -18,42 +18,35 @@
 <!-- HTML Kode -->
 <body>
 
-    <div class="feedback">
+    <!-- Intro Start -->
+    <div class="hidden">
+        <img src=""> <!-- Indsæt billede -->
+        <h1>Hej! Jeg er Locky!</h1>
+        <p>Jeg skal teste din viden, inden for cybersikkerhed. Dit mål er at skabe din online identitet, naviger i realistiske scenarier, og undgå at miste dine penge, og sørge for at holde dig sikker på nettet.</p>
+        <p>Jeg vil guide dig gennem din rejse, og give dig tips og tricks til at holde dig sikker online. Dine valg afgør din skæbne og din score, som jeg bedømmer, ud fra hvordan du klarer dig!</p>
+        <p>Er du klar til at begynde din rejse? Tryk på knappen nedenfor for at starte!</p>
         <div class="btn-group">
-            <img src=""> <!-- Indsæt billede -->
-            <h1>Hej! Jeg er Locky!</h1>
-            <p>Jeg skal teste din viden, inden for cybersikkerhed. Dit mål er at skabe din online identitet, naviger i realistiske scenarier, og undgå at miste dine penge, og sørge for at holde dig sikker på nettet.</p>
-            <p>Jeg vil guide dig gennem din rejse, og give dig tips og tricks til at holde dig sikker online. Dine valg afgør din skæbne og din score, som jeg bedømmer, ud fra hvordan du klarer dig!</p>
-            <p>Er du klar til at begynde din rejse? Tryk på knappen nedenfor for at starte!</p>
-            <button id="c1">Begynd</a>
+            <button id="start">Begynd</a>
         </div>
     </div>
-    <!-- div*3#c$-f.feedback{Feedback c$} -->
-    <div id="c1-f" class="feedback">
-        <p>Feedback c1</p>
+
+
+    <!-- Step 1: Kaldenavn -->
+    <div id="trin1" class="hidden">
+        <div>
+            <img>
+            <p>Først... Indtast gerne dit navn!</p>
+        </div> 
+        <h2>Indtast kaldenavn:</h2>
+        <input type="text" id="kaldenavn" placeholder="Indtast kaldenavn her..." oninput="toggleButtonState()">
         <div class="btn-group">
-            <button id="c1-1">Button 1-1</button>
-            <button id="c1-2">Button 1-2</button>
-            <button id="c1-3">Button 1-3</button>
+            <button id="godkend1" disabled>Godkend</button>
         </div>
     </div>
-    <div id="c2-f" class="feedback">Feedback c2</div>
-    <div id="c3-f" class="feedback">Feedback c3</div>    
 
-    <div id="start" class="btn-group">
-
-    </div>
-
-    <div class="hidden" id="trin1">
+    <!-- Choice 1: Rigtige Navn? -->
+    <div id="valg1" class="hidden">
         <p>Test</p>
-    </div>
-
-    <div class="hidden" id="svar1-1a">
-        
-    </div>
-
-    <div id="svar1-2a">
-        
     </div>
 
 </body>
