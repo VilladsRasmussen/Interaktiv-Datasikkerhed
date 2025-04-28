@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@
         <p>Jeg vil guide dig gennem din rejse, og give dig tips og tricks til at holde dig sikker online. Dine valg afgør din skæbne og din score, som jeg bedømmer, ud fra hvordan du klarer dig!</p>
         <p>Er du klar til at begynde din rejse? Tryk på knappen nedenfor for at starte!</p>
         <div class="btn-group">
-            <button id="start">Begynd</a>
+            <button id="start">Begynd</button>
         </div>
     </div>
 
@@ -44,9 +44,226 @@
         </div>
     </div>
 
-    <!-- Choice 1: Rigtige Navn? -->
-    <div id="valg1" class="hidden">
-        <p>Test</p>
+    <!-- Valg 1: Rigtige Navn? -->
+    <div id="trin2" class="hidden">
+        <div>
+            <img>
+            <p>Velkommen <span id="visKaldenavn"></span>!</p>
+        </div> 
+        <div>
+        <h3>Vær ærlig... indtastede du dit rigtige navn?</h3>
+            <div class="btn-group">
+                <button id="rigtige">Ja</button>
+                <button id="falske">Nej</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Svar 1.1a: Det var forkert -->
+    <div id="svar1a" class="hidden">
+        <div>
+            <img>
+            <p>Øh nej...</p>
+        </div>
+        <div class="btn-group">
+            <button id="forsæt1a">Forsæt</button>
+        </div>
+    </div>
+
+    <!-- Trin 2a: Aldrig del personlige oplysninger (Dårlig svar)-->
+    <div id="trin2a" class="hidden">
+        <img>
+        <h2>
+            Vær forsigtig med infomation du giver ud!
+        </h2>
+        <p>
+            Dit navn er en af de vigtigste personlige oplysninger, fordi det kan bruges til at bekræfte din identitet i fx bank- eller retslige sammenhænge. 
+        </p>
+        <p>
+            Jeg ville aldrig gøre dig noget ondt mod dig! Men hvis en ondsindet person kombinerer dit navn med yderligere offentligt tilgængelige data (adresse, fødselsdato mv.), kan vedkommende begå identitetstyveri, og andre forfærdelige ting! Derudover kan offentlig deling af dit navn føre til privatlivskrænkelser som stalking eller chikane, og potentielle arbejdsgivere eller andre kan let kortlægge din familie, bopæl og arbejdsplads online.
+        </p>
+        <p>
+            Så ja... Det var ikke så godt at du gjorde det. Gerne lade vær med at gøre det på en daglig basis... Altid vær opmærksom om det!
+        </p>
+        <div class="btn-group">
+            <button id="forsæt1aa">Forsæt</button>
+        </div>
+    </div>
+
+    <!-- Svar 1.1b: Det var rigtigt -->
+    <div id="svar1b" class="hidden">
+        <div>
+            <img>
+            <p>Phew... Det var godt!</p>
+        </div>
+        <div class="btn-group">
+            <button id="forsæt1b">Forsæt</button>
+        </div>
+    </div>
+
+    <!-- Trin 2b: Aldrig del personlige oplysninger (God svar)-->
+    <div id="trin2b" class="hidden">
+        <img>
+        <h2>
+            Vær forsigtig med infomation du giver ud!
+        </h2>
+        <p>
+            Dit navn er en af de vigtigste personlige oplysninger, fordi det kan bruges til at bekræfte din identitet i fx bank- eller retslige sammenhænge. 
+        </p>
+        <p>
+            Jeg ville aldrig gøre dig noget ondt mod dig! Men hvis en ondsindet person kombinerer dit navn med yderligere offentligt tilgængelige data (adresse, fødselsdato mv.), kan vedkommende begå identitetstyveri, og andre forfærdelige ting! Derudover kan offentlig deling af dit navn føre til privatlivskrænkelser som stalking eller chikane, og potentielle arbejdsgivere eller andre kan let kortlægge din familie, bopæl og arbejdsplads online.
+        </p>
+        <p>
+            Men det er godt du allerede virker til ikke at ville være villig til at dele alt dit data med mig!
+        </p>
+        <div class="btn-group">
+            <button id="forsæt1bb">Forsæt</button>
+        </div>
+    </div>
+
+    <!-- Trin 3A: Will Smith -->
+    <div id="retning1" class="hidden">
+        <div>
+            <img>
+            <p>Will Smith skrev til dig! Gad vide hvordan han fandt dig...</p>
+        </div> 
+        <img> <!-- Billede af samtale -->
+        <h3>Hvordan ville du reagere?</h3>
+        <div class="btn-group">
+            <button id="bloker">Bloker dem</button>
+            <button id="klik">Klik på linket</button>
+        </div>
+    </div>
+
+
+
+    <!-- Svar 2.1a: Bloker -->
+    <div id="svar2a" class="hidden">
+        <div>
+            <img>
+            <p>Du har faktisk en hjerne!</p>
+        </div>
+        <div class="btn-group">
+            <button id="forsæt2a">Forsæt</button>
+        </div>
+    </div>
+
+    <!-- Trin 3a: Aldrig klik på besynderlige links... (God svar) -->
+    <div id="trin3a" class="hidden">
+        <img>
+        <h2>
+            Aldrig klik på mistænkelige links! ALDRIG!
+        </h2>
+        <p>
+            Hvad du lige oplevet der, var noget der hedder Smishing! Det er en form for “Social Engineering”. De sendte dig en SMS, og prøvede at manipulere dig til at klikke på et link, så de kan få dine oplysninger og penge! Det værste er, at de ikke efterlader nogle spor af deres kriminalitet.      
+        <p>
+        <p>
+            En person, der forsøger at udføre et "social engineering"-cyberangreb, kan ofte kendes på visse tydelige tegn. Det kan være uventede beskeder fra ukendte afsendere, hvor de anmoder om følsomme oplysninger eller presser på for hurtige handlinger. Ofte vil de lokke med tilbud, der virker for gode til at være sande, eller de vil bruge emotionelle appeller for at fremkalde panik eller medfølelse, hvilket får modtageren til at handle uden at tænke sig om.        
+        </p>
+        <p>
+            Godt du dog vidste at det ikke var Will Smith... Er rimelig sikker på han heller ikke skriver dansk...        
+        </p>
+        <div class="btn-group">
+            <button id="slutning1">Forsæt</button>
+        </div>
+    </div>
+
+    <!-- Slutning 1: Du er sikker! -->
+    <div id="konklusion1" class="hidden">
+        <h1>SLUT</h1>
+        <h2>Din konklusion:</h2>
+        <div>
+            <img src="" alt="">
+            <h3>Godt beskyttet!</h3>
+        </div>
+        <div class="btn-group">
+            <button id="afrunding1">Gå videre</button>
+        </div>
+    </div>
+
+    <!-- Endelig feedback 1: Du er sikker! -->
+    <div id="endelig-feedback1" class="hidden">
+        <img>
+        <h2>
+            Der er plads til forbedringer... Men ellers godt!
+        </h2>
+        <p>
+            Du virker til at have en god forståelse for hvordan du skal være på nettet. Der er stadig plads til at du kan gøre nogle ting bedre, men spil det her igen, og du ville garanteret nå 100% sikkerhed næste gang!        
+        </p>
+        <p>
+            Næste gang bør du tage nogle vigtige forholdsregler: Sørg for at lave stærkere adgangskoder, vær forsigtig med at dele personlige oplysninger, undgå altid at klikke på mistænkelige links, og sørg for at installere beskyttelse som VPN og antivirus for at sikre dine enheder bedst muligt.
+        </p>
+        <h3>Ville du prøve igen?</h3>
+        <div class="btn-group">
+            <button id="restart">Start forfra</button>
+        </div>
+    </div>
+
+
+
+    <!-- Svar 2.1b: Klik på linket -->
+    <div id="svar2b" class="hidden">
+        <div>
+            <img>
+            <p>Nu du virkelig på spanden...</p>
+        </div>
+        <div class="btn-group">
+            <button id="forsæt2b">Forsæt</button>
+        </div>
+    </div>
+
+    <!-- Trin 3b: Aldrig klik på besynderlige links... (God svar) -->
+    <div id="trin3b" class="hidden">
+        <img>
+        <h2>
+            Aldrig klik på mistænkelige links! ALDRIG!
+        </h2>
+        <p>
+            Hvad du lige oplevet der, var noget der hedder Smishing! Det er en form for “Social Engineering”. De sendte dig en SMS, og prøvede at manipulere dig til at klikke på et link, så de kan få dine oplysninger og penge! Det værste er, at de ikke efterlader nogle spor af deres kriminalitet.      
+        <p>
+        <p>
+            En person, der forsøger at udføre et "social engineering"-cyberangreb, kan ofte kendes på visse tydelige tegn. Det kan være uventede beskeder fra ukendte afsendere, hvor de anmoder om følsomme oplysninger eller presser på for hurtige handlinger. Ofte vil de lokke med tilbud, der virker for gode til at være sande, eller de vil bruge emotionelle appeller for at fremkalde panik eller medfølelse, hvilket får modtageren til at handle uden at tænke sig om.        
+        </p>
+        <p>
+            Så... Nu er nærmest alle dine penge væk... Gerningsmanden var dog sød at efterlade 20 kr. så du kan købe en Tasty Cheese.        
+        </p>
+        <div class="btn-group">
+            <button id="slutning2">Forsæt</button>
+        </div>
+    </div>
+
+    <!-- Slutning 1: Du er hjemløs! -->
+    <div id="konklusion2" class="hidden">
+        <h1>SLUT</h1>
+        <h2>Din konklusion:</h2>
+        <div>
+            <img src="" alt="">
+            <h3>Hjemløs</h3>
+        </div>
+        <div class="btn-group">
+            <button id="afrunding2">Gå videre</button>
+        </div>
+    </div>
+
+    <!-- Endelig feedback 1: Du er hjemløs! -->
+    <div id="endelig-feedback2" class="hidden">
+        <img>
+        <h2>
+            Din rejse var kort og skræmmende... -100 aura.
+        </h2>
+        <p>
+            Denne slutning er blevet besluttet ud af dine meget lave erfaringer med at beskytte dig selv på nettet. Eller din ulyst til det. Du er ligeglad med din adgangskoder, hvilken data du giver af dig selv ud på nettet, og genereltset... Stoler du på alle mennesker i verden. 
+        </p>
+        <p>
+            Heldigvis er dette ikke virkelighed! Det kunne dog være hvis du ikke begynder at ændre nogle af dine vaner snart...
+        </p>
+        <p>
+            Næste gang bør du tage nogle vigtige forholdsregler: Sørg for at lave stærkere adgangskoder, vær forsigtig med at dele personlige oplysninger, undgå altid at klikke på mistænkelige links, og sørg for at installere beskyttelse som VPN og antivirus for at sikre dine enheder bedst muligt.
+        </p>
+        <h3>Ville du prøve igen?</h3>
+        <div class="btn-group">
+            <button id="restart">Start forfra</button>
+        </div>
     </div>
 
 </body>

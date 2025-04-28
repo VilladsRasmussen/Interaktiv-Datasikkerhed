@@ -8,18 +8,128 @@ const boxes = document.querySelectorAll('.hidden');
 const choices = []
 
 // FUNCTION
-const checkAnswer = (e) => { // Funktion med en parameter (e)
+const checkAnswer = (e) => {
     boxes.forEach(box => {
         box.style.display = 'none';
     })
-    choices.push(e.target.id); // Tilføjer id'et fra det klikkede element til choices arrayet
-    console.log(choices); // Logger choices arrayet i konsollen
-    switch (e.target.id) { // Forholder sig til det klikkede elements id
-        case 'start': document.querySelector('#trin1').style.display = 'block'; // Viser elementet med id="c1-f"
+    
+    if (e.target.id !== 'godkend1') {
+        choices.push(e.target.id);
+    }
+    
+    switch (e.target.id) {
+    // START
+        case 'start': 
+            document.querySelector('#trin1').style.display = 'block';
+            console.log('Choices array:', choices);
         break;
-        case 'godkend1': document.querySelector('#valg1').style.display = 'block'; // Viser elementet med id="c1-f"
+
+    // TRIN 1 - Lav en brugernavn
+        case 'godkend1': 
+            const inputValue = document.getElementById('kaldenavn').value;
+            choices.push(inputValue);
+            document.querySelector('#trin2').style.display = 'block';
+            const displayElement = document.querySelector('#visKaldenavn');
+            if (displayElement) {
+                displayElement.textContent = inputValue;
+                console.log('Choices array:', choices);
+            }
         break;
-        default: console.log("Error"); // Viser error, hvis id ikke findes
+
+
+
+    // VALG 1 - Indtastede du rigtige eller falsk navn?
+        case 'rigtige': 
+            document.querySelector('#svar1a').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'falske': 
+            document.querySelector('#svar1b').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+
+
+    // SVAR 1.1
+        case 'forsæt1a': // Rettet fra 'fortsæt1a' til 'forsæt1a'
+            document.querySelector('#trin2a').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'forsæt1b': 
+            document.querySelector('#trin2b').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+
+    // Feedback 1a og 1b
+        case 'forsæt1aa': // Rettet fra 'fortsæt1a' til 'forsæt1a'
+            document.querySelector('#retning1').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'forsæt1bb': 
+            document.querySelector('#trin3B').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+
+
+
+    
+
+    // Retning 1 - Will Smith
+        case 'bloker': 
+            document.querySelector('#svar2a').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'klik': 
+            document.querySelector('#svar2b').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+    // 
+
+    // SVAR 2.1
+        case 'forsæt2a': // Rettet fra 'fortsæt2a' til 'forsæt2a'
+            document.querySelector('#trin3a').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'forsæt2b': 
+            document.querySelector('#trin3b').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+    // Feedback 2a og 2b
+        case 'slutning1': // Rettet fra 'fortsæt2a' til 'forsæt2a'
+            document.querySelector('#konklusion1').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'slutning2': 
+            document.querySelector('#konklusion2').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+    // SLUTNING 1 - Will Smith snød dig ikke
+        case 'afrunding1': 
+            document.querySelector('#endelig-feedback1').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'afrunding2': 
+            document.querySelector('#endelig-feedback2').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+    // ENDELIG FEEDBACK
+        case 'restart':
+            window.location.reload();
+        break;
+
+
+
+
+    // Hvis intet er rigtigt
+        default: 
+            console.log("Error");
+            console.log('Choices array:', choices);
     }
 }
 
