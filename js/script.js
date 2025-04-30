@@ -67,7 +67,7 @@ const checkAnswer = (e) => {
             console.log('Choices array:', choices);
         break;
         case 'forsæt1bb': 
-            document.querySelector('#trin3B').style.display = 'block';
+            document.querySelector('#retning2').style.display = 'block';
             console.log('Choices array:', choices);
         break;
 
@@ -86,7 +86,6 @@ const checkAnswer = (e) => {
             console.log('Choices array:', choices);
         break;
 
-    // 
 
     // SVAR 2.1
         case 'forsæt2a': // Rettet fra 'fortsæt2a' til 'forsæt2a'
@@ -118,19 +117,69 @@ const checkAnswer = (e) => {
             console.log('Choices array:', choices);
         break;
 
-    // ENDELIG FEEDBACK
-        case 'restart':
-            window.location.reload();
+
+
+
+
+    // Retning 2 - Anti Virus
+        case 'klik-knap': 
+            document.querySelector('#svar3a').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'ignorer': 
+            document.querySelector('#svar3b').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+    // SVAR 3.1
+        case 'forsæt3a': // Rettet fra 'fortsæt2a' til 'forsæt2a'
+            document.querySelector('#feedback4a').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'forsæt3b': 
+            document.querySelector('#feedback4b').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+    // Konsekvens
+        case 'konsekvens': // Rettet fra 'fortsæt2a' til 'forsæt2a'
+            document.querySelector('#du-er-hacket').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'slutning3': // Rettet fra 'fortsæt2a' til 'forsæt2a'
+            document.querySelector('#konklusion3').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+    // Feedback 3b
+        case 'slutning4': 
+            document.querySelector('#konklusion4').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+
+    // SLUTNING 3 & 4
+        case 'afrunding3': 
+            document.querySelector('#endelig-feedback3').style.display = 'block';
+            console.log('Choices array:', choices);
+        break;
+        case 'afrunding4': 
+            document.querySelector('#endelig-feedback4').style.display = 'block';
+            console.log('Choices array:', choices);
         break;
 
 
 
+    // ENDELIG FEEDBACK
+        case 'restart':
+            window.location.reload();
+        break;    
 
     // Hvis intet er rigtigt
         default: 
             console.log("Error");
             console.log('Choices array:', choices);
     }
+    console.log('Choices array:', choices);
 }
 
 btns.forEach(btn => {
