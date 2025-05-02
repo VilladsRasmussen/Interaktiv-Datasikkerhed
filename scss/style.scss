@@ -1,3 +1,262 @@
+// =====================================
+// STYLEGUIDE INDHOLD
+// =====================================
+// 1.  VARIABLER        // Sass-variabler og farvepalette
+// 2.  COMPONENTS       // Genbrugelige UI-komponenter
+// 3.  UTILITIES        // Hjælpeklasser og mixins
+// 4.  TYPOGRAFI        // Fontstørrelser, overskrifter, brødtekst
+// 5.  FARVER           // Farve-utilities
+// 6.  SPACING          // Margin- og padding-skala
+// 7.  KNAPPER          // Knapstile
+// 8.  FORMS            // Formularfelter og labels
+// 9.  LAYOUT           // Grid-systemer og containere
+// 10. JAVASCRIPT      // JavaScript-specifikke stilarter
+
+@use 'partials';
+
+// 1.  VARIABLER        // Sass-variabler og farvepalette
+
+     // 1.1 FARVER
+    $baggrundsfarve: #131928;
+
+    $knap-farve: #FFFFFF;
+    $knap-hover-farve: #555555;
+
+    $lys-tekstfarve: #F0F0F0;
+    $mørk-tekstfarve: #131928;
+    $korrekt-tekstfarve: #00FF00;
+    $forrkert-tekstfarve: #FF0000;
+
+    // 1.2 TYPOGRAFI
+    .jersey-10-regular {
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    $font: "Jersey 10", sans-serif;
+
+            // 1.2.1 OVERSKRIFTER & PARAGRAFER
+            html {
+                font-size: 62.5%; // 1rem = 10px (62.5% af standard 16px)
+            }
+
+            $overskrift: 4rem;
+            $knap-tekst: 4rem;
+            $lille-talebobl-tekst: 2.4rem;
+            $stor-talebobl-tekst: 4rem;
+            $paragraf-tekst: 2rem;
+            $konklusion-tekst: 12.8rem;
+
+     // 1.3 BILLEDER
+    $locky: "../img/locky.png";
+
+
+// 2.  MIXINS        // Mixins til forskellige ting
+
+    // 2.1 FLEXBOX
+    @mixin mobil-flexbox($direction: column, $justify: center, $align: center) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: $align;
+        gap: 2rem;
+    }
+
+    @mixin dialog-flexbox($direction: row, $justify: center) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        gap: 2rem;
+    }
+
+    @mixin stor-dialog-flexbox($direction: column, $align: center) {
+        display: flex;
+        flex-direction: $direction;
+        align-items: $align;
+        gap: 2rem;
+    }
+
+    @mixin button-group($direction: row, $justify: center) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    // TEXT
+
+    // 2.2 KNAPPER
+    @mixin knap($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
+        background-color: $farve;
+        color: $mørk-tekstfarve;
+        font-size: $knap-tekst;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        border: none;
+        width: 300px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $hover-farve;
+        }
+    }
+
+        // 2.2.1 - Input felter
+        @mixin input-felt($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
+            background-color: $farve;
+            color: $mørk-tekstfarve;
+            font-size: $paragraf-tekst;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            width: 70%;
+            font-family: $font;
+        }
+
+    // 2.3 TALEBOBELER
+    @mixin talebobel($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
+        background-color: $farve;
+        color: $mørk-tekstfarve;
+        font-size: $lille-talebobl-tekst;
+        padding: 1rem 2rem;
+        width: auto;
+        max-width: 300px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    @mixin stor-talebobel($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
+        background-color: $farve;
+        color: $mørk-tekstfarve;
+        font-size: $stor-talebobl-tekst;
+        padding: 2rem 3rem;
+        width: auto;
+        max-width: 300px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+
+
+// 3.  SEKTIONER        // Opstilling af sektioner vha. flexbox
+
+    // 3.1 Intro
+    section {
+        @include mobil-flexbox(column, center, center);
+        height: 100vh;
+        margin: 0 5% 0 5%; // top right bottom left
+    }
+
+
+
+
+// 4.  GRUNDLÆGGENDE    // Elememnter der er grundlæggende for HTML
+
+body {
+    background-color: $baggrundsfarve;
+}
+
+input {
+    @include input-felt($knap-farve, $knap-hover-farve);
+}
+
+.talebobel {
+    @include talebobel($knap-farve, $knap-hover-farve);
+}
+
+.stor-talebobel {
+    @include stor-talebobel($knap-farve, $knap-hover-farve);
+}
+
+    // 4.1 Dialoger
+
+.dialog {
+    @include dialog-flexbox(row, center);
+    margin-bottom: 30px;
+}
+
+.stor-dialog {
+    @include stor-dialog-flexbox(column, center);
+    margin-bottom: 30px;
+}
+
+.btn-group {
+    @include button-group(column, center);
+}
+
+    // 4.2 Links
+    a {
+        color: $lys-tekstfarve;
+        text-decoration: none;
+        font-size: $paragraf-tekst;
+    }
+
+
+// 5.  TEKSTER          // Konfigurering af tekster
+    
+h1, h2, h3, h4, h5, h6, p, span, a, button {
+    font-family: $font;
+}
+
+        // 5.1 Overskrifter
+        h2 {
+            font-size: $overskrift;
+            color: $lys-tekstfarve;
+            text-align: center;
+            margin: 0;
+            font-weight: 100;
+        }
+    
+        // 5.2 Paragrafer
+        p {
+            font-size: $paragraf-tekst;
+            color: $lys-tekstfarve;
+            text-align: center;
+            margin: 0;
+        }
+    
+// 6.  BILLEDER          // Konfigurering af billeder
+
+    // 6.1 Stor-Locky
+    .stor-locky {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .lille-locky {
+        max-width: 30%;
+        height: auto;
+    }
+
+// 7.  KNAPPER            // Konfigurering af knapper
+
+    // 7.1 Knapper
+    button {
+        @include knap($knap-farve, $knap-hover-farve);
+    }
+
+    button:hover {
+        background-color: $knap-hover-farve;
+    }
+
+// 8. FARVER           // Farvebrug
+
+.forkert-farve {
+    color: $forrkert-tekstfarve;
+}
+
+
+// 9. JAVASCRIPT      // JavaScript-specifikke stilarter
 .hidden:not(:first-of-type) {
     display: none;
 }

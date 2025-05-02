@@ -1,3 +1,149 @@
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+  margin: 0 5% 0 5%;
+}
+
+body {
+  background-color: #131928;
+}
+
+input {
+  background-color: #FFFFFF;
+  color: #131928;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  font-family: "Jersey 10", sans-serif;
+}
+
+.talebobel {
+  background-color: #FFFFFF;
+  color: #131928;
+  font-size: 2.4rem;
+  padding: 1rem 2rem;
+  width: auto;
+  max-width: 300px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stor-talebobel {
+  background-color: #FFFFFF;
+  color: #131928;
+  font-size: 4rem;
+  padding: 2rem 3rem;
+  width: auto;
+  max-width: 300px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 30px;
+}
+
+.stor-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 30px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+a {
+  color: #F0F0F0;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, button {
+  font-family: "Jersey 10", sans-serif;
+}
+
+h2 {
+  font-size: 4rem;
+  color: #F0F0F0;
+  text-align: center;
+  margin: 0;
+  font-weight: 100;
+}
+
+p {
+  font-size: 2rem;
+  color: #F0F0F0;
+  text-align: center;
+  margin: 0;
+}
+
+.stor-locky {
+  max-width: 50%;
+  height: auto;
+}
+
+.lille-locky {
+  max-width: 30%;
+  height: auto;
+}
+
+button {
+  background-color: #FFFFFF;
+  color: #131928;
+  font-size: 4rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+button:hover {
+  background-color: #555555;
+}
+
+button:hover {
+  background-color: #555555;
+}
+
+.forkert-farve {
+  color: #FF0000;
+}
+
 .hidden:not(:first-of-type) {
   display: none;
 }/*# sourceMappingURL=style.css.map */

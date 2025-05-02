@@ -19,60 +19,63 @@
 <body>
 
     <!-- Intro Start -->
-    <div class="hidden">
-        <img src="img/Locky.png"> <!-- Indsæt billede -->
-        <h1>Hej! Jeg er Locky!</h1>
-        <p>Jeg skal teste din viden, inden for cybersikkerhed. Dit mål er at skabe din online identitet, naviger i realistiske scenarier, og undgå at miste dine penge, og sørge for at holde dig sikker på nettet.</p>
-        <p>Jeg vil guide dig gennem din rejse, og give dig tips og tricks til at holde dig sikker online. Dine valg afgør din skæbne og din score, som jeg bedømmer, ud fra hvordan du klarer dig!</p>
-        <p>Er du klar til at begynde din rejse? Tryk på knappen nedenfor for at starte!</p>
+    <section class="hidden">
+        <img class="stor-locky" src="img/Locky.png"> <!-- Indsæt billede -->
+        <h2 class="center-overskrift">Hej! Jeg er Locky!</h2>
+        <p>
+            Jeg skal teste din viden, inden for cybersikkerhed. Dit mål er at skabe din online identitet, naviger i realistiske scenarier, og undgå at miste dine penge, og sørge for at holde dig sikker på nettet.
+        </p>
+        <p>
+            Jeg vil guide dig gennem din rejse, og give dig tips og tricks til at holde dig sikker online. Dine valg afgør din skæbne og din score, som jeg bedømmer, ud fra hvordan du klarer dig!
+        </p>
+        <p>
+            Er du klar til at begynde din rejse? Tryk på knappen nedenfor for at starte!
+        </p>
         <div class="btn-group">
             <button id="start">Begynd</button>
         </div>
-    </div>
+    </section>
 
 
     <!-- Step 1: Kaldenavn -->
-    <div id="trin1" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Først... Indtast gerne dit navn!</p>
+    <section id="trin1" class="hidden">
+        <div class="dialog">
+            <img class="lille-locky" src="img/Locky.png">
+            <p class="talebobel">Først... Indtast gerne dit navn!</p>
         </div> 
-        <h2>Indtast kaldenavn:</h2>
+        <h2 class="center-overskrift">Indtast kaldenavn:</h2>
         <input type="text" id="kaldenavn" placeholder="Indtast kaldenavn her..." oninput="toggleButtonState()">
         <div class="btn-group">
             <button id="godkend1" disabled>Godkend</button>
         </div>
-    </div>
+    </section>
 
     <!-- Valg 1: Rigtige Navn? -->
-    <div id="trin2" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Velkommen <span id="visKaldenavn"></span>!</p>
+    <section id="trin2" class="hidden">
+        <div class="stor-dialog">
+            <img class="stor-locky" src="img/Locky.png">
+            <h2 class>Vær ærlig <span id="visKaldenavn"></span>... Indtastede du dit eget navn?</h2>
         </div> 
-        <div>
-        <h3>Vær ærlig... indtastede du dit rigtige navn?</h3>
-            <div class="btn-group">
-                <button id="rigtige">Ja</button>
-                <button id="falske">Nej</button>
-            </div>
+        <div class="btn-group">
+            <button id="rigtige">Ja</button>
+            <button id="falske">Nej</button>
         </div>
-    </div>
+    </section>
 
     <!-- Svar 1.1a: Det var forkert -->
-    <div id="svar1a" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Øh nej...</p>
+    <section id="svar1a" class="hidden">
+        <div class="stor-dialog">
+            <img class="stor-locky" src="img/Locky.png">
+            <h2 class="stor-talebobel">Øh nej...</h2>
         </div>
         <div class="btn-group">
             <button id="forsæt1a">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Trin 2a: Aldrig del personlige oplysninger (Dårlig svar)-->
-    <div id="trin2a" class="hidden">
-        <img src="img/Locky.png">
+    <section id="trin2a" class="hidden">
+        <img class="lille-locky" src="img/Locky.png">
         <h2>
             Vær forsigtig med infomation du giver ud!
         </h2>
@@ -82,16 +85,16 @@
         <p>
             Jeg ville aldrig gøre dig noget ondt mod dig! Men hvis en ondsindet person kombinerer dit navn med yderligere offentligt tilgængelige data (adresse, fødselsdato mv.), kan vedkommende begå identitetstyveri, og andre forfærdelige ting! Derudover kan offentlig deling af dit navn føre til privatlivskrænkelser som stalking eller chikane, og potentielle arbejdsgivere eller andre kan let kortlægge din familie, bopæl og arbejdsplads online.
         </p>
-        <p>
+        <p class="forkert-farve">
             Så ja... Det var ikke så godt at du gjorde det. Gerne lade vær med at gøre det på en daglig basis... Altid vær opmærksom om det!
         </p>
         <div class="btn-group">
             <button id="forsæt1aa">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Svar 1.1b: Det var rigtigt -->
-    <div id="svar1b" class="hidden">
+    <section id="svar1b" class="hidden">
         <div>
             <img src="img/Locky.png">
             <p>Phew... Det var godt!</p>
@@ -99,10 +102,10 @@
         <div class="btn-group">
             <button id="forsæt1b">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Trin 2b: Aldrig del personlige oplysninger (God svar)-->
-    <div id="trin2b" class="hidden">
+    <section id="trin2b" class="hidden">
         <img src="img/Locky.png">
         <h2>
             Vær forsigtig med infomation du giver ud!
@@ -119,7 +122,7 @@
         <div class="btn-group">
             <button id="forsæt1bb">Forsæt</button>
         </div>
-    </div>
+    </section>
 
 
 
@@ -127,18 +130,18 @@
 
 
     <!-- Trin 3A: Will Smith -->
-    <div id="retning1" class="hidden">
+    <section id="retning1" class="hidden">
         <div>
             <img src="img/Locky.png">
             <p>Will Smith skrev til dig! Gad vide hvordan han fandt dig...</p>
         </div> 
         <img> <!-- Billede af samtale -->
-        <h3>Hvordan ville du reagere?</h3>
+        <h2>Hvordan ville du reagere?</h2>
         <div class="btn-group">
             <button id="bloker">Bloker dem</button>
             <button id="klik">Klik på linket</button>
         </div>
-    </div>
+    </section>
 
 
 
@@ -148,7 +151,7 @@
     <!-- WILL SMITH: SVARER GODT.-->
 
     <!-- Svar 2.1a: Bloker -->
-    <div id="svar2a" class="hidden">
+    <section id="svar2a" class="hidden">
         <div>
             <img src="img/Locky.png">
             <p>Du har faktisk en hjerne!</p>
@@ -156,10 +159,10 @@
         <div class="btn-group">
             <button id="forsæt2a">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Trin 3a: Aldrig klik på besynderlige links... (God svar) -->
-    <div id="trin3a" class="hidden">
+    <section id="trin3a" class="hidden">
         <img src="img/Locky.png">
         <h2>
             Aldrig klik på mistænkelige links! ALDRIG!
@@ -176,23 +179,23 @@
         <div class="btn-group">
             <button id="slutning1">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Slutning 1: Du er sikker! -->
-    <div id="konklusion1" class="hidden">
-        <h1>SLUT</h1>
+    <section id="konklusion1" class="hidden">
+        <h2>SLUT</h2>
         <h2>Din konklusion:</h2>
         <div>
             <img src="" alt=""> <!-- Konklusion Billede -->
-            <h3>Godt beskyttet!</h3>
+            <h2>Godt beskyttet!</h2>
         </div>
         <div class="btn-group">
             <button id="afrunding1">Gå videre</button>
         </div>
-    </div>
+    </section>
 
     <!-- Endelig feedback 1: Du er sikker! -->
-    <div id="endelig-feedback1" class="hidden">
+    <section id="endelig-feedback1" class="hidden">
         <img src="img/Locky.png">
         <h2>
             Der er plads til forbedringer... Men ellers godt!
@@ -203,11 +206,11 @@
         <p>
             Næste gang bør du tage nogle vigtige forholdsregler: Sørg for at lave stærkere adgangskoder, vær forsigtig med at dele personlige oplysninger, undgå altid at klikke på mistænkelige links, og sørg for at installere beskyttelse som VPN og antivirus for at sikre dine enheder bedst muligt.
         </p>
-        <h3>Ville du prøve igen?</h3>
+        <h2>Ville du prøve igen?</h2>
         <div class="btn-group">
             <button id="restart">Start forfra</button>
         </div>
-    </div>
+    </section>
 
 
 
@@ -215,7 +218,7 @@
     <!-- WILL SMITH: SVARER FORKERT.-->
 
     <!-- Svar 2.1b: Klik på linket -->
-    <div id="svar2b" class="hidden">
+    <section id="svar2b" class="hidden">
         <div>
             <img src="img/Locky.png">
             <p>Nu du virkelig på spanden...</p>
@@ -223,10 +226,10 @@
         <div class="btn-group">
             <button id="forsæt2b">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Trin 3b: Aldrig klik på besynderlige links... (God svar) -->
-    <div id="trin3b" class="hidden">
+    <section id="trin3b" class="hidden">
         <img src="img/Locky.png">
         <h2>
             Aldrig klik på mistænkelige links! ALDRIG!
@@ -243,23 +246,23 @@
         <div class="btn-group">
             <button id="slutning2">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Slutning 1: Du er hjemløs! -->
-    <div id="konklusion2" class="hidden">
-        <h1>SLUT</h1>
+    <section id="konklusion2" class="hidden">
+        <h2>SLUT</h2>
         <h2>Din konklusion:</h2>
         <div>
             <img src="" alt=""> <!-- Konklusion Billede -->
-            <h3>Hjemløs</h3>
+            <h2>Hjemløs</h2>
         </div>
         <div class="btn-group">
             <button id="afrunding2">Gå videre</button>
         </div>
-    </div>
+    </section>
 
     <!-- Endelig feedback 1: Du er hjemløs! -->
-    <div id="endelig-feedback2" class="hidden">
+    <section id="endelig-feedback2" class="hidden">
         <img src="img/Locky.png">
         <h2>
             Din rejse var kort og skræmmende... -100 aura.
@@ -273,30 +276,30 @@
         <p>
             Næste gang bør du tage nogle vigtige forholdsregler: Sørg for at lave stærkere adgangskoder, vær forsigtig med at dele personlige oplysninger, undgå altid at klikke på mistænkelige links, og sørg for at installere beskyttelse som VPN og antivirus for at sikre dine enheder bedst muligt.
         </p>
-        <h3>Ville du prøve igen?</h3>
+        <h2>Ville du prøve igen?</h2>
         <div class="btn-group">
             <button id="restart">Start forfra</button>
         </div>
-    </div>
+    </section>
 
 
 
     <!-- Retning 2 - Antivirus -->
-    <div id="retning2" class="hidden">
+    <section id="retning2" class="hidden">
         <div>
             <img src="img/Locky.png">
             <p>Hov... Jeg fik vidst en pop-op... Må være en af mine ads...</p>
         </div> 
         <img> <!-- Billede af samtale -->
-        <h3>Hvordan ville du reagere?</h3>
+        <h2>Hvordan ville du reagere?</h2>
         <div class="btn-group">
             <button id="klik-knap">Klik på knappen</button>
             <button id="ignorer">Ignorer det</button>
         </div>
-    </div>
+    </section>
 
     <!-- Svar 3a: Det var det forkerte -->
-    <div id="svar3a" class="hidden">
+    <section id="svar3a" class="hidden">
         <div>
             <img src="img/Locky.png">
             <p>Hvad laver du?!</p>
@@ -304,11 +307,11 @@
         <div class="btn-group">
             <button id="forsæt3a">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Svar 3a: Feedback -->
 
-    <div id="feedback4a" class="hidden">
+    <section id="feedback4a" class="hidden">
         <img src="img/Locky.png">
         <h2>
             Lad ikke pop-ops vinduer snyde dig!
@@ -328,10 +331,10 @@
         <div class="btn-group">
             <button id="konsekvens">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Konsekvense -->
-    <div id="du-er-hacket" class="hidden">
+    <section id="du-er-hacket" class="hidden">
         <div>
             <img src="img/Locky.png">
             <p>Wow! Se hvad jeg sagde...</p>
@@ -340,23 +343,23 @@
         <div class="btn-group">
             <button id="slutning3">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Slutning 3: 100% Screwed -->
-    <div id="konklusion3" class="hidden">
-        <h1>SLUT</h1>
+    <section id="konklusion3" class="hidden">
+        <h2>SLUT</h2>
         <h2>Din konklusion:</h2>
         <div>
             <img src="" alt=""> <!-- Konklusion Billede -->
-            <h3>100% Screwed</h3>
+            <h2>100% Screwed</h2>
         </div>
         <div class="btn-group">
             <button id="afrunding3">Gå videre</button>
         </div>
-    </div>
+    </section>
     
     <!-- Endelig Feedback 3 -->
-    <div id="endelig-feedback3" class="hidden">
+    <section id="endelig-feedback3" class="hidden">
         <img src="img/Locky.png">
         <h2>
             Du fik den værste slutning!
@@ -370,17 +373,17 @@
         <p>
             Næste gang bør du tage nogle vigtige forholdsregler: Sørg for at lave stærkere adgangskoder, vær forsigtig med at dele personlige oplysninger, undgå altid at klikke på mistænkelige links, og sørg for at installere beskyttelse som VPN og antivirus for at sikre dine enheder bedst muligt.
         </p>
-        <h3>Ville du prøve igen?</h3>
+        <h2>Ville du prøve igen?</h2>
         <div class="btn-group">
             <button id="restart">Start forfra</button>
         </div>
-    </div>
+    </section>
 
 
 
 
     <!-- Svar 3a: Det var det forkerte -->
-    <div id="svar3b" class="hidden">
+    <section id="svar3b" class="hidden">
         <div>
             <img src="img/Locky.png">
             <p>Gudskelov!</p>
@@ -388,11 +391,11 @@
         <div class="btn-group">
             <button id="forsæt3b">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Svar 3a: Feedback -->
 
-    <div id="feedback4b" class="hidden">
+    <section id="feedback4b" class="hidden">
         <img src="img/Locky.png">
         <h2>
             Lad ikke pop-ops vinduer snyde dig!        
@@ -412,23 +415,23 @@
         <div class="btn-group">
             <button id="slutning4">Forsæt</button>
         </div>
-    </div>
+    </section>
 
     <!-- Slutning 3: 100% Sikker -->
-    <div id="konklusion4" class="hidden">
-        <h1>SLUT</h1>
+    <section id="konklusion4" class="hidden">
+        <h2>SLUT</h2>
         <h2>Din konklusion:</h2>
         <div>
             <img src="" alt=""> <!-- Konklusion Billede -->
-            <h3>100% Sikker!</h3>
+            <h2>100% Sikker!</h2>
         </div>
         <div class="btn-group">
             <button id="afrunding4">Gå videre</button>
         </div>
-    </div>
+    </section>
     
     <!-- Endelig Feedback 3 -->
-    <div id="endelig-feedback4" class="hidden">
+    <section id="endelig-feedback4" class="hidden">
         <img src="img/Locky.png">
         <h2>
             Du fik den bedste slutning!
@@ -440,11 +443,11 @@
             Som en gevinst for at du har klaret det så godt, ville jeg give dig noget helt specielt... Klik på knappen for at hente din velfortjente belønning!        
         </p>
         <a href="">Hent gevinst</a> <!-- Link til gevinst -->
-        <h3>Ville du prøve igen?</h3>
+        <h2>Ville du prøve igen?</h2>
         <div class="btn-group">
             <button id="restart">Start forfra</button>
         </div>
-    </div>
+    </section>
 
 
 </body>
