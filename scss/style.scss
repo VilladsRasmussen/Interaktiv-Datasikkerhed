@@ -1,152 +1,4 @@
-// =====================================
-// STYLEGUIDE INDHOLD
-// =====================================
-// 1.  VARIABLER        // Sass-variabler og farvepalette
-// 2.  COMPONENTS       // Genbrugelige UI-komponenter
-// 3.  UTILITIES        // Hjælpeklasser og mixins
-// 4.  TYPOGRAFI        // Fontstørrelser, overskrifter, brødtekst
-// 5.  FARVER           // Farve-utilities
-// 6.  SPACING          // Margin- og padding-skala
-// 7.  KNAPPER          // Knapstile
-// 8.  FORMS            // Formularfelter og labels
-// 9.  LAYOUT           // Grid-systemer og containere
-// 10. JAVASCRIPT      // JavaScript-specifikke stilarter
-
 @use 'partials';
-
-// 1.  VARIABLER        // Sass-variabler og farvepalette
-
-     // 1.1 FARVER
-    $baggrundsfarve: #131928;
-
-    $knap-farve: #FFFFFF;
-    $knap-hover-farve: #555555;
-
-    $lys-tekstfarve: #F0F0F0;
-    $mørk-tekstfarve: #131928;
-    $korrekt-tekstfarve: #00FF00;
-    $forrkert-tekstfarve: #FF0000;
-
-    // 1.2 TYPOGRAFI
-    .jersey-10-regular {
-        font-family: "Jersey 10", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    $font: "Jersey 10", sans-serif;
-
-            // 1.2.1 OVERSKRIFTER & PARAGRAFER
-            html {
-                font-size: 62.5%; // 1rem = 10px (62.5% af standard 16px)
-            }
-
-            $overskrift: 4rem;
-            $knap-tekst: 4rem;
-            $lille-talebobl-tekst: 2.4rem;
-            $stor-talebobl-tekst: 4rem;
-            $paragraf-tekst: 2rem;
-            $konklusion-tekst: 12.8rem;
-
-     // 1.3 BILLEDER
-    $locky: "../img/locky.png";
-
-
-// 2.  MIXINS        // Mixins til forskellige ting
-
-    // 2.1 FLEXBOX
-    @mixin mobil-flexbox($direction: column, $justify: center, $align: center) {
-        display: flex;
-        flex-direction: $direction;
-        justify-content: $justify;
-        align-items: $align;
-        gap: 2rem;
-    }
-
-    @mixin dialog-flexbox($direction: row, $justify: center) {
-        display: flex;
-        flex-direction: $direction;
-        justify-content: $justify;
-        gap: 2rem;
-    }
-
-    @mixin stor-dialog-flexbox($direction: column, $align: center) {
-        display: flex;
-        flex-direction: $direction;
-        align-items: $align;
-        gap: 2rem;
-    }
-
-    @mixin button-group($direction: row, $justify: center) {
-        display: flex;
-        flex-direction: $direction;
-        justify-content: $justify;
-        gap: 2rem;
-        flex-wrap: wrap;
-    }
-
-    // TEXT
-
-    // 2.2 KNAPPER
-    @mixin knap($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
-        background-color: $farve;
-        color: $mørk-tekstfarve;
-        font-size: $knap-tekst;
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        border: none;
-        width: 300px;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out;
-
-        &:hover {
-            background-color: $hover-farve;
-        }
-    }
-
-        // 2.2.1 - Input felter
-        @mixin input-felt($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
-            background-color: $farve;
-            color: $mørk-tekstfarve;
-            font-size: $paragraf-tekst;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            width: 70%;
-            font-family: $font;
-        }
-
-    // 2.3 TALEBOBELER
-    @mixin talebobel($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
-        background-color: $farve;
-        color: $mørk-tekstfarve;
-        font-size: $lille-talebobl-tekst;
-        padding: 1rem 2rem;
-        width: auto;
-        max-width: 300px;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    @mixin stor-talebobel($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
-        background-color: $farve;
-        color: $mørk-tekstfarve;
-        font-size: $stor-talebobl-tekst;
-        padding: 2rem 3rem;
-        width: auto;
-        max-width: 300px;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-
-
 
 // 3.  SEKTIONER        // Opstilling af sektioner vha. flexbox
 
@@ -156,8 +8,6 @@
         height: 100vh;
         margin: 0 5% 0 5%; // top right bottom left
     }
-
-
 
 
 // 4.  GRUNDLÆGGENDE    // Elememnter der er grundlæggende for HTML
@@ -170,12 +20,14 @@ input {
     @include input-felt($knap-farve, $knap-hover-farve);
 }
 
-.talebobel {
-    @include talebobel($knap-farve, $knap-hover-farve);
+.talebobl {
+    @include talebobl($knap-farve, $knap-hover-farve);
+    font-size: $lille-talebobl-tekst;
 }
 
-.stor-talebobel {
-    @include stor-talebobel($knap-farve, $knap-hover-farve);
+.stor-talebobl {
+    @include talebobl($knap-farve, $knap-hover-farve);
+    font-size: $stor-talebobl-tekst;
 }
 
     // 4.1 Dialoger
@@ -225,6 +77,45 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
             margin: 0;
         }
     
+        // 5.3 Konklusioner
+
+        .dårlig-konklusion-tekst {
+            @include konklusion-tekst($forkert-tekstfarve, $konklusion-tekst);
+        }
+
+        .god-konklusion-tekst {
+            @include konklusion-tekst($korrekt-tekstfarve, $konklusion-tekst);
+        }
+
+        .neutral-konklusion-tekst {
+            @include konklusion-tekst($neutral-tekstfarve, $konklusion-tekst);
+        }
+
+        .konklusion-feedback-tekst {
+            @include konklusion-tekst($color: $lys-tekstfarve, $font-size: $konklusion-feedback-tekst);
+        }
+
+.slut-tekst {
+    font-size: $konklusion-tekst;
+    color: $lys-tekstfarve;
+}
+
+
+
+        // 5.3 Talebobler
+        .talebobl-tekst {
+            font-size: $lille-talebobl-tekst;
+            color: $lys-tekstfarve;
+            text-align: center;
+            margin: 0;
+        }
+
+        .stor-talebobl-tekst {
+            font-size: $stor-talebobl-tekst;
+            color: $lys-tekstfarve;
+            text-align: center;
+            margin: 0;
+        }
 // 6.  BILLEDER          // Konfigurering af billeder
 
     // 6.1 Stor-Locky
@@ -238,11 +129,35 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
         height: auto;
     }
 
+    // 6.2 Scenarier billeder
+    .scenarie {
+        max-width: 90%;
+        height: auto;
+    }
+
+    // 6.3 Konklusioner billeder
+
+    .dårlig-slutning-billede {
+        @include konklusion-billede($forkert-tekstfarve);
+    }
+
+    .god-slutning-billede {
+        @include konklusion-billede($korrekt-tekstfarve);
+    }
+
+    .neutral-slutning-billede {
+        @include konklusion-billede($neutral-tekstfarve);
+    }
+
 // 7.  KNAPPER            // Konfigurering af knapper
 
     // 7.1 Knapper
-    button {
+    button,
+    a.knap {
         @include knap($knap-farve, $knap-hover-farve);
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
     }
 
     button:hover {
@@ -252,11 +167,25 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
 // 8. FARVER           // Farvebrug
 
 .forkert-farve {
-    color: $forrkert-tekstfarve;
+    color: $forkert-tekstfarve;
 }
 
+.korrekt-farve {
+    color: $korrekt-tekstfarve;
+}
 
-// 9. JAVASCRIPT      // JavaScript-specifikke stilarter
+.neutral-farve {
+    color: $neutral-tekstfarve;
+}
+
+// 9. SPACING          // Margin og padding
+
+    // 9.1 Margin
+    .margin-bottom {
+        margin-bottom: $margin-bottom;
+    }
+
+// 10. JAVASCRIPT      // JavaScript-specifikke stilarter
 .hidden:not(:first-of-type) {
     display: none;
 }

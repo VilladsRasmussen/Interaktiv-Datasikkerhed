@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .jersey-10-regular {
   font-family: "Jersey 10", sans-serif;
   font-weight: 400;
@@ -34,10 +35,9 @@ input {
   font-family: "Jersey 10", sans-serif;
 }
 
-.talebobel {
+.talebobl {
   background-color: #FFFFFF;
   color: #131928;
-  font-size: 2.4rem;
   padding: 1rem 2rem;
   width: auto;
   max-width: 300px;
@@ -46,13 +46,13 @@ input {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-size: 2.8rem;
 }
 
-.stor-talebobel {
+.stor-talebobl {
   background-color: #FFFFFF;
   color: #131928;
-  font-size: 4rem;
-  padding: 2rem 3rem;
+  padding: 1rem 2rem;
   width: auto;
   max-width: 300px;
   border: none;
@@ -60,6 +60,7 @@ input {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-size: 4rem;
 }
 
 .dialog {
@@ -111,6 +112,53 @@ p {
   margin: 0;
 }
 
+.dårlig-konklusion-tekst {
+  text-align: center;
+  margin: 0;
+  font-size: 15rem;
+  color: #FF0000;
+}
+
+.god-konklusion-tekst {
+  text-align: center;
+  margin: 0;
+  font-size: 15rem;
+  color: #00FF00;
+}
+
+.neutral-konklusion-tekst {
+  text-align: center;
+  margin: 0;
+  font-size: 15rem;
+  color: #FFFF00;
+}
+
+.konklusion-feedback-tekst {
+  text-align: center;
+  margin: 0;
+  font-size: 5rem;
+  color: #F0F0F0;
+}
+
+.slut-tekst {
+  font-size: 15rem;
+  color: #F0F0F0;
+}
+
+.talebobl-tekst {
+  font-size: 2.8rem;
+  color: #F0F0F0;
+  text-align: center;
+  margin: 0;
+}
+
+.stor-talebobl-tekst {
+  font-size: 4rem;
+  color: #F0F0F0;
+  text-align: center;
+  margin: 0;
+}
+
 .stor-locky {
   max-width: 50%;
   height: auto;
@@ -121,7 +169,34 @@ p {
   height: auto;
 }
 
-button {
+.scenarie {
+  max-width: 90%;
+  height: auto;
+}
+
+.dårlig-slutning-billede {
+  max-width: 90%;
+  height: auto;
+  border: 5px solid #FF0000;
+  border-radius: 10px;
+}
+
+.god-slutning-billede {
+  max-width: 90%;
+  height: auto;
+  border: 5px solid #00FF00;
+  border-radius: 10px;
+}
+
+.neutral-slutning-billede {
+  max-width: 90%;
+  height: auto;
+  border: 5px solid #FFFF00;
+  border-radius: 10px;
+}
+
+button,
+a.knap {
   background-color: #FFFFFF;
   color: #131928;
   font-size: 4rem;
@@ -131,8 +206,12 @@ button {
   width: 300px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
 }
-button:hover {
+button:hover,
+a.knap:hover {
   background-color: #555555;
 }
 
@@ -142,6 +221,18 @@ button:hover {
 
 .forkert-farve {
   color: #FF0000;
+}
+
+.korrekt-farve {
+  color: #00FF00;
+}
+
+.neutral-farve {
+  color: #FFFF00;
+}
+
+.margin-bottom {
+  margin-bottom: 3rem;
 }
 
 .hidden:not(:first-of-type) {

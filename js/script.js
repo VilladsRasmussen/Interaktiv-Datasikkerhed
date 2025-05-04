@@ -2,10 +2,10 @@
 
 // Start
 
-// NODELIST / ARRAY
+// NODELIST / ARRAY (Gemmer svarene i en array)
 const btns = document.querySelectorAll('.btn-group button');
 const boxes = document.querySelectorAll('.hidden');
-const choices = []
+const choices = JSON.parse(localStorage.getItem('choices') || '[]');
 
 // FUNCTION
 const checkAnswer = (e) => {
@@ -13,13 +13,18 @@ const checkAnswer = (e) => {
         box.style.display = 'none';
     })
     
-    if (e.target.id !== 'godkend1') {
-        choices.push(e.target.id);
+    const id = e.target.id;
+    // Gemmer ikke valg der kun fører en retning (Undgår gentagninger)
+    if (id !== 'godkend1' && id !== 'restart' && !id.startsWith('forsæt') && !id.startsWith('slutning')) {
+        choices.push(id);
     }
     
     switch (e.target.id) {
     // START
         case 'start': 
+            // Nulstiller arrayet fra localStorage, og begynder at gemme nye valg
+            choices.splice(0, choices.length);
+            localStorage.setItem('choices', JSON.stringify(choices));
             document.querySelector('#trin1').style.display = 'flex';
         break;
 
@@ -141,10 +146,12 @@ const checkAnswer = (e) => {
             document.querySelector('#endelig-feedback4').style.display = 'flex';
         break;
 
-
-
+    
+        
     // ENDELIG FEEDBACK
         case 'restart':
+            // clear stored choices then reload
+            localStorage.removeItem('choices');
             window.location.reload();
         break;    
 
@@ -154,6 +161,7 @@ const checkAnswer = (e) => {
             console.log('Choices array:', choices);
     }
     console.log('Choices array:', choices);
+    localStorage.setItem('choices', JSON.stringify(choices));
 }
 
 btns.forEach(btn => {
@@ -166,3 +174,13 @@ function toggleButtonState() {
     const button = document.getElementById('godkend1');
     button.disabled = input.value.trim() === '';
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('svar1');
+    if (saved === 'rigtige') {
+      document.querySelector('#svar1a').style.display = 'flex';
+    }
+    else if (saved === 'falske') {
+      document.querySelector('#svar1b').style.display = 'flex';
+    }
+  });

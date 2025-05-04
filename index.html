@@ -41,7 +41,7 @@
     <section id="trin1" class="hidden">
         <div class="dialog">
             <img class="lille-locky" src="img/Locky.png">
-            <p class="talebobel">Først... Indtast gerne dit navn!</p>
+            <p class="talebobl">Først... Indtast gerne dit navn!</p>
         </div> 
         <h2 class="center-overskrift">Indtast kaldenavn:</h2>
         <input type="text" id="kaldenavn" placeholder="Indtast kaldenavn her..." oninput="toggleButtonState()">
@@ -66,7 +66,7 @@
     <section id="svar1a" class="hidden">
         <div class="stor-dialog">
             <img class="stor-locky" src="img/Locky.png">
-            <h2 class="stor-talebobel">Øh nej...</h2>
+            <h2 class="stor-talebobl">Øh nej...</h2>
         </div>
         <div class="btn-group">
             <button id="forsæt1a">Forsæt</button>
@@ -95,9 +95,9 @@
 
     <!-- Svar 1.1b: Det var rigtigt -->
     <section id="svar1b" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Phew... Det var godt!</p>
+        <div class="stor-dialog">
+            <img class="stor-locky" src="img/Locky.png">
+            <p class="stor-talebobl">Phew... Det var godt!</p>
         </div>
         <div class="btn-group">
             <button id="forsæt1b">Forsæt</button>
@@ -106,7 +106,7 @@
 
     <!-- Trin 2b: Aldrig del personlige oplysninger (God svar)-->
     <section id="trin2b" class="hidden">
-        <img src="img/Locky.png">
+        <img class="lille-locky" src="img/Locky.png">
         <h2>
             Vær forsigtig med infomation du giver ud!
         </h2>
@@ -131,11 +131,11 @@
 
     <!-- Trin 3A: Will Smith -->
     <section id="retning1" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Will Smith skrev til dig! Gad vide hvordan han fandt dig...</p>
+        <div class="dialog">
+            <img class="lille-locky" src="img/Locky.png">
+            <p class="talebobl">Will Smith skrev til dig! Gad vide hvordan han fandt dig...</p>
         </div> 
-        <img> <!-- Billede af samtale -->
+        <img class="scenarie" src="img/will-smith.png"> <!-- Billede af samtale -->
         <h2>Hvordan ville du reagere?</h2>
         <div class="btn-group">
             <button id="bloker">Bloker dem</button>
@@ -152,9 +152,9 @@
 
     <!-- Svar 2.1a: Bloker -->
     <section id="svar2a" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Du har faktisk en hjerne!</p>
+        <div class="stor-dialog">
+            <img class="stor-locky" src="img/Locky.png">
+            <p class="stor-talebobl">Du har faktisk en hjerne!</p>
         </div>
         <div class="btn-group">
             <button id="forsæt2a">Forsæt</button>
@@ -163,17 +163,17 @@
 
     <!-- Trin 3a: Aldrig klik på besynderlige links... (God svar) -->
     <section id="trin3a" class="hidden">
-        <img src="img/Locky.png">
+        <img class="lille-locky" src="img/Locky.png">
         <h2>
             Aldrig klik på mistænkelige links! ALDRIG!
         </h2>
         <p>
             Hvad du lige oplevet der, var noget der hedder Smishing! Det er en form for “Social Engineering”. De sendte dig en SMS, og prøvede at manipulere dig til at klikke på et link, så de kan få dine oplysninger og penge! Det værste er, at de ikke efterlader nogle spor af deres kriminalitet.      
-        <p>
+        </p>
         <p>
             En person, der forsøger at udføre et "social engineering"-cyberangreb, kan ofte kendes på visse tydelige tegn. Det kan være uventede beskeder fra ukendte afsendere, hvor de anmoder om følsomme oplysninger eller presser på for hurtige handlinger. Ofte vil de lokke med tilbud, der virker for gode til at være sande, eller de vil bruge emotionelle appeller for at fremkalde panik eller medfølelse, hvilket får modtageren til at handle uden at tænke sig om.        
         </p>
-        <p>
+        <p class="korrekt-farve">
             Godt du dog vidste at det ikke var Will Smith... Er rimelig sikker på han heller ikke skriver dansk...        
         </p>
         <div class="btn-group">
@@ -183,11 +183,11 @@
 
     <!-- Slutning 1: Du er sikker! -->
     <section id="konklusion1" class="hidden">
-        <h2>SLUT</h2>
-        <h2>Din konklusion:</h2>
-        <div>
-            <img src="" alt=""> <!-- Konklusion Billede -->
-            <h2>Godt beskyttet!</h2>
+        <h2 class="neutral-konklusion-tekst">SLUT</h2>
+        <h2 class="konklusion-feedback-tekst">Din konklusion:</h2>
+        <div class="stor-dialog">
+            <img class="neutral-slutning-billede" src="img/nogenlunde-sikker.png"> <!-- Konklusion Billede -->
+            <h2 class="konklusion-feedback-tekst">Nogenlunde Sikker</h2>
         </div>
         <div class="btn-group">
             <button id="afrunding1">Gå videre</button>
@@ -196,14 +196,14 @@
 
     <!-- Endelig feedback 1: Du er sikker! -->
     <section id="endelig-feedback1" class="hidden">
-        <img src="img/Locky.png">
-        <h2>
+        <img class="lille-locky" src="img/Locky.png">
+        <h2 class="neutral-farve">
             Der er plads til forbedringer... Men ellers godt!
         </h2>
         <p>
             Du virker til at have en god forståelse for hvordan du skal være på nettet. Der er stadig plads til at du kan gøre nogle ting bedre, men spil det her igen, og du ville garanteret nå 100% sikkerhed næste gang!        
         </p>
-        <p>
+        <p class="margin-bottom">
             Næste gang bør du tage nogle vigtige forholdsregler: Sørg for at lave stærkere adgangskoder, vær forsigtig med at dele personlige oplysninger, undgå altid at klikke på mistænkelige links, og sørg for at installere beskyttelse som VPN og antivirus for at sikre dine enheder bedst muligt.
         </p>
         <h2>Ville du prøve igen?</h2>
@@ -219,9 +219,9 @@
 
     <!-- Svar 2.1b: Klik på linket -->
     <section id="svar2b" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Nu du virkelig på spanden...</p>
+        <div class="stor-dialog">
+            <img class="stor-locky" src="img/Locky.png">
+            <p class="stor-talebobl">Nu du virkelig på spanden...</p>
         </div>
         <div class="btn-group">
             <button id="forsæt2b">Forsæt</button>
@@ -230,17 +230,17 @@
 
     <!-- Trin 3b: Aldrig klik på besynderlige links... (God svar) -->
     <section id="trin3b" class="hidden">
-        <img src="img/Locky.png">
+        <img class="lille-locky" src="img/Locky.png">
         <h2>
             Aldrig klik på mistænkelige links! ALDRIG!
         </h2>
         <p>
             Hvad du lige oplevet der, var noget der hedder Smishing! Det er en form for “Social Engineering”. De sendte dig en SMS, og prøvede at manipulere dig til at klikke på et link, så de kan få dine oplysninger og penge! Det værste er, at de ikke efterlader nogle spor af deres kriminalitet.      
-        <p>
+        </p>
         <p>
             En person, der forsøger at udføre et "social engineering"-cyberangreb, kan ofte kendes på visse tydelige tegn. Det kan være uventede beskeder fra ukendte afsendere, hvor de anmoder om følsomme oplysninger eller presser på for hurtige handlinger. Ofte vil de lokke med tilbud, der virker for gode til at være sande, eller de vil bruge emotionelle appeller for at fremkalde panik eller medfølelse, hvilket får modtageren til at handle uden at tænke sig om.        
         </p>
-        <p>
+        <p class="forkert-farve">
             Så... Nu er nærmest alle dine penge væk... Gerningsmanden var dog sød at efterlade 20 kr. så du kan købe en Tasty Cheese.        
         </p>
         <div class="btn-group">
@@ -248,13 +248,13 @@
         </div>
     </section>
 
-    <!-- Slutning 1: Du er hjemløs! -->
+    <!-- Slutning 2: Du er hjemløs! -->
     <section id="konklusion2" class="hidden">
-        <h2>SLUT</h2>
-        <h2>Din konklusion:</h2>
-        <div>
-            <img src="" alt=""> <!-- Konklusion Billede -->
-            <h2>Hjemløs</h2>
+        <h2 class="dårlig-konklusion-tekst">SLUT</h2>
+        <h2 class="konklusion-feedback-tekst">Din konklusion:</h2>
+        <div class="stor-dialog">
+            <img src="img/hjemløs.png" class="dårlig-slutning-billede"> <!-- Konklusion Billede -->
+            <h2 class="konklusion-feedback-tekst">Hjemløs</h2>
         </div>
         <div class="btn-group">
             <button id="afrunding2">Gå videre</button>
@@ -263,8 +263,8 @@
 
     <!-- Endelig feedback 1: Du er hjemløs! -->
     <section id="endelig-feedback2" class="hidden">
-        <img src="img/Locky.png">
-        <h2>
+        <img class="lille-locky" src="img/Locky.png">
+        <h2 class="forkert-farve">
             Din rejse var kort og skræmmende... -100 aura.
         </h2>
         <p>
@@ -273,7 +273,7 @@
         <p>
             Heldigvis er dette ikke virkelighed! Det kunne dog være hvis du ikke begynder at ændre nogle af dine vaner snart...
         </p>
-        <p>
+        <p class="margin-bottom">
             Næste gang bør du tage nogle vigtige forholdsregler: Sørg for at lave stærkere adgangskoder, vær forsigtig med at dele personlige oplysninger, undgå altid at klikke på mistænkelige links, og sørg for at installere beskyttelse som VPN og antivirus for at sikre dine enheder bedst muligt.
         </p>
         <h2>Ville du prøve igen?</h2>
@@ -286,12 +286,12 @@
 
     <!-- Retning 2 - Antivirus -->
     <section id="retning2" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Hov... Jeg fik vidst en pop-op... Må være en af mine ads...</p>
+        <div class="dialog">
+            <img class="lille-locky" src="img/Locky.png">
+            <p class="talebobl">Hov... Jeg fik vidst en pop-op... Må være en af mine ads...</p>
         </div> 
-        <img> <!-- Billede af samtale -->
-        <h2>Hvordan ville du reagere?</h2>
+        <img class="scenarie" src="img/pop-op.png"> <!-- Billede af samtale -->
+        <h2>Hvordan ville du reagere i sådan en situation?</h2>
         <div class="btn-group">
             <button id="klik-knap">Klik på knappen</button>
             <button id="ignorer">Ignorer det</button>
@@ -300,9 +300,9 @@
 
     <!-- Svar 3a: Det var det forkerte -->
     <section id="svar3a" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Hvad laver du?!</p>
+        <div class="stor-dialog">
+            <img class="stor-locky" src="img/Locky.png">
+            <p class="stor-talebobl">Hvad laver du?!</p>
         </div>
         <div class="btn-group">
             <button id="forsæt3a">Forsæt</button>
@@ -312,7 +312,7 @@
     <!-- Svar 3a: Feedback -->
 
     <section id="feedback4a" class="hidden">
-        <img src="img/Locky.png">
+        <img class="lille-locky" src="img/Locky.png">
         <h2>
             Lad ikke pop-ops vinduer snyde dig!
         </h2>
@@ -325,8 +325,8 @@
         <p>
             Til fremtidige formål er det vigtigt at være opmærksom på visse faresignaler. Hold øje med uventede beskeder fra ukendte afsendere, især hvis de indeholder anmodninger om følsomme oplysninger eller opfordringer til hurtig handling. Vær også skeptisk over for tilbud, der virker for gode til at være sande, samt beskeder med emotionelle appeller, som forsøger at skabe panik eller medfølelse.
         </p>
-        <p>
-            Så... Nu er nærmest alle dine penge væk... Gerningsmanden var dog sød at efterlade 20 kr. så du kan købe en Tasty Cheese.        
+        <p class="forkert-farve">
+            For sent at sige for dig dog... Du har allerede sikret dig selv at blive hacket på et eller andet tidspunkt...
         </p>
         <div class="btn-group">
             <button id="konsekvens">Forsæt</button>
@@ -335,23 +335,23 @@
 
     <!-- Konsekvense -->
     <section id="du-er-hacket" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Wow! Se hvad jeg sagde...</p>
+        <div class="dialog">
+            <img class="lille-locky" src="img/Locky.png">
+            <p class="talebobl">Wow! Se hvad jeg sagde...</p>
         </div>
-        <img> <!-- Billede af samtale -->
+        <img src="img/hacket.png" class="margin-bottom scenarie"> <!-- Billede af samtale -->
         <div class="btn-group">
             <button id="slutning3">Forsæt</button>
         </div>
     </section>
 
-    <!-- Slutning 3: 100% Screwed -->
+    <!-- Slutning 3: 100% Fortabt -->
     <section id="konklusion3" class="hidden">
-        <h2>SLUT</h2>
-        <h2>Din konklusion:</h2>
-        <div>
-            <img src="" alt=""> <!-- Konklusion Billede -->
-            <h2>100% Screwed</h2>
+        <h2 class="dårlig-konklusion-tekst">SLUT</h2>
+        <h2 class="konklusion-feedback-tekst">Din konklusion:</h2>
+        <div class="stor-dialog">
+            <img class="dårlig-slutning-billede" src="img/total-hjemløs.png"> <!-- Konklusion Billede -->
+            <h2>100% Fortabt</h2>
         </div>
         <div class="btn-group">
             <button id="afrunding3">Gå videre</button>
@@ -360,9 +360,9 @@
     
     <!-- Endelig Feedback 3 -->
     <section id="endelig-feedback3" class="hidden">
-        <img src="img/Locky.png">
-        <h2>
-            Du fik den værste slutning!
+        <img class="lille-locky" src="img/Locky.png">
+        <h2 class="forkert-farve">
+            Du fik den værste slutning! Du kunne ikke gøre det værre!
         </h2>
         <p>
             Jeg ved du prøvede dit bedste... Du har måske faktisk klaret dig virkelig godt i andre ting. Så der er en chance for at du faktisk gør nogle ting rigtige. Men du har alligevel gjort nok dumme ting på internettet, at du stadig ender ud med at have ingen penge, ingen sikkerhed, og er blevet bestræbbet alt dit data fra dig. Dine forældre burde virkelig ikke have givet dig adgang til internettet.
@@ -370,7 +370,7 @@
         <p>
             Men vi alle sammen laver fejl. Vi har allesammen ret til at blive givet ekstra chancer. (Bortset fra faktiske kriminelle.) Så her er hvad du burde gøre næste gang:        
         </p>
-        <p>
+        <p class="margin-bottom">
             Næste gang bør du tage nogle vigtige forholdsregler: Sørg for at lave stærkere adgangskoder, vær forsigtig med at dele personlige oplysninger, undgå altid at klikke på mistænkelige links, og sørg for at installere beskyttelse som VPN og antivirus for at sikre dine enheder bedst muligt.
         </p>
         <h2>Ville du prøve igen?</h2>
@@ -384,9 +384,9 @@
 
     <!-- Svar 3a: Det var det forkerte -->
     <section id="svar3b" class="hidden">
-        <div>
-            <img src="img/Locky.png">
-            <p>Gudskelov!</p>
+        <div class="stor-dialog">
+            <img class="stor-locky" src="img/Locky.png">
+            <p class="stor-talebobl">Gudskelov!</p>
         </div>
         <div class="btn-group">
             <button id="forsæt3b">Forsæt</button>
@@ -396,7 +396,7 @@
     <!-- Svar 3a: Feedback -->
 
     <section id="feedback4b" class="hidden">
-        <img src="img/Locky.png">
+        <img class="lille-locky" src="img/Locky.png">
         <h2>
             Lad ikke pop-ops vinduer snyde dig!        
         </h2>
@@ -410,39 +410,39 @@
             Til fremtidige situationer er det vigtigt at være opmærksom på visse faresignaler. Vær særligt opmærksom på uventede beskeder fra ukendte afsendere, anmodninger om følsomme oplysninger eller pres for at handle hurtigt. Vær også skeptisk over for tilbud, der virker for gode til at være sande, samt emotionelle appeller, der forsøger at skabe panik eller vække medfølelse.        
         </p>
         <p>
-            Jeg ville aldrig sende dig en virus dog! Og det virker til du har en forståelse for hvornår du skal og ikke skal reagere        
+            Jeg ville aldrig sende dig en virus dog! Og det virker til du har en forståelse for hvornår du skal og ikke skal reagere.        
         </p>
         <div class="btn-group">
             <button id="slutning4">Forsæt</button>
         </div>
     </section>
 
-    <!-- Slutning 3: 100% Sikker -->
+    <!-- Slutning 4: 100% Sikker -->
     <section id="konklusion4" class="hidden">
-        <h2>SLUT</h2>
-        <h2>Din konklusion:</h2>
-        <div>
-            <img src="" alt=""> <!-- Konklusion Billede -->
-            <h2>100% Sikker!</h2>
+        <h2 class="god-konklusion-tekst">SLUT</h2>
+        <h2 class="konklusion-feedback-tekst">Din konklusion:</h2>
+        <div class="stor-dialog">
+            <img class="god-slutning-billede" src="img/total-sikker.png" alt="100% Sikker"> <!-- Konklusion Billede -->
+            <h2 class="konklusion-feedback-tekst">100% Sikker!</h2>
         </div>
         <div class="btn-group">
             <button id="afrunding4">Gå videre</button>
         </div>
     </section>
     
-    <!-- Endelig Feedback 3 -->
+    <!-- Endelig Feedback 4 -->
     <section id="endelig-feedback4" class="hidden">
-        <img src="img/Locky.png">
-        <h2>
+        <img class="lille-locky" src="img/Locky.png">
+        <h2 class="korrekt-farve">
             Du fik den bedste slutning!
         </h2>
         <p>
             Jeg er så stolt af at du har fået 100% sikkerhed! Du har virkelig styr på hvordan du skal beskytte dig selv på internettet... Selvfølgelig er der andre ting at være opmærksomme på, som jeg muligvis ikke har dækket, men jeg er selvsikker i, at du faktisk ved hvad du laver på nettet!
         </p>
-        <p>
+        <p class="margin-bottom">
             Som en gevinst for at du har klaret det så godt, ville jeg give dig noget helt specielt... Klik på knappen for at hente din velfortjente belønning!        
         </p>
-        <a href="">Hent gevinst</a> <!-- Link til gevinst -->
+        <a class="knap" href="https://youtu.be/khfDbE01Qgs">Hent gevinst</a> <!-- Link til gevinst -->
         <h2>Ville du prøve igen?</h2>
         <div class="btn-group">
             <button id="restart">Start forfra</button>
