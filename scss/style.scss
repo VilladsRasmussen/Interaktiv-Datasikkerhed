@@ -1,4 +1,4 @@
-@use 'partials';
+@use 'partials' as *;
 
 // 3.  SEKTIONER        // Opstilling af sektioner vha. flexbox
 
@@ -13,11 +13,22 @@
 // 4.  GRUNDLÆGGENDE    // Elememnter der er grundlæggende for HTML
 
 body {
+    transition: background-color 0.5s ease-in-out;
     background-color: $baggrundsfarve;
 }
 
 input {
-    @include input-felt($knap-farve, $knap-hover-farve);
+    background-color: $knap-farve;
+    color: $mørk-tekstfarve;
+    font-size: $paragraf-tekst;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    max-width: 300px;
+    font-family: $font;
+    margin-bottom: $margin-bottom;
+    font-size: $lille-talebobl-tekst;
 }
 
 .talebobl {
@@ -37,8 +48,8 @@ input {
     margin-bottom: 30px;
 }
 
-.stor-dialog {
-    @include stor-dialog-flexbox(column, center);
+.lodret {
+    @include lodret-flexbox(column, center);
     margin-bottom: 30px;
 }
 
@@ -120,18 +131,19 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
 
     // 6.1 Stor-Locky
     .stor-locky {
-        max-width: 50%;
+        max-width: 30%;
         height: auto;
     }
 
     .lille-locky {
-        max-width: 30%;
+        max-width: 20%;
         height: auto;
     }
 
     // 6.2 Scenarier billeder
     .scenarie {
-        max-width: 90%;
+        min-width: 300px;
+        max-width: 40%;
         height: auto;
     }
 
@@ -185,7 +197,36 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
         margin-bottom: $margin-bottom;
     }
 
+    .negativ-margin {
+        margin-bottom: -$margin-bottom;
+    }
+
 // 10. JAVASCRIPT      // JavaScript-specifikke stilarter
 .hidden:not(:first-of-type) {
     display: none;
+}
+
+// 11. MEDIA QUERY    // Responsivitet
+
+// 11.1 --- Til tablets
+@media (min-width: 768px) {
+    section {
+        @include mobil-flexbox(column, center, center);
+        height: 100vh;
+        margin: 0 20% 0 20%; // top right bottom left
+    }
+
+} 
+
+// 11.2 --- Til computere
+@media (min-width: 1024px) {
+    section {
+        @include mobil-flexbox(column, center, center);
+        height: 100vh;
+        margin: 0 20% 0 20%; // top right bottom left
+    }
+
+    .talebobl {
+        @include talebobl($knap-farve, $knap-hover-farve, $stor-talebobl-tekst);
+    }
 }

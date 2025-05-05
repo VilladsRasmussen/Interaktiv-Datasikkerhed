@@ -48,12 +48,14 @@
         <div class="btn-group">
             <button id="godkend1" disabled>Godkend</button>
         </div>
+        <p class="neutral-farve negativ-margin">INFO:</p>
+        <p>Du skal indtaste noget i feltet, før du kan fortsætte.</p>
     </section>
 
     <!-- Valg 1: Rigtige Navn? -->
     <section id="trin2" class="hidden">
-        <div class="stor-dialog">
-            <img class="stor-locky" src="img/Locky.png">
+        <div class="lodret">
+            <img class="stor-locky" src="img/usikker-locky.png">
             <h2 class>Vær ærlig <span id="visKaldenavn"></span>... Indtastede du dit eget navn?</h2>
         </div> 
         <div class="btn-group">
@@ -64,9 +66,9 @@
 
     <!-- Svar 1.1a: Det var forkert -->
     <section id="svar1a" class="hidden">
-        <div class="stor-dialog">
-            <img class="stor-locky" src="img/Locky.png">
-            <h2 class="stor-talebobl">Øh nej...</h2>
+        <div class="lodret">
+            <img class="stor-locky" src="img/sur-locky.png">
+            <h2 class="stor-talebobl">HVA?! Det mener du ikke!</h2>
         </div>
         <div class="btn-group">
             <button id="forsæt1a">Forsæt</button>
@@ -75,7 +77,7 @@
 
     <!-- Trin 2a: Aldrig del personlige oplysninger (Dårlig svar)-->
     <section id="trin2a" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/skuffet-locky.png">
         <h2>
             Vær forsigtig med infomation du giver ud!
         </h2>
@@ -95,8 +97,8 @@
 
     <!-- Svar 1.1b: Det var rigtigt -->
     <section id="svar1b" class="hidden">
-        <div class="stor-dialog">
-            <img class="stor-locky" src="img/Locky.png">
+        <div class="lodret">
+            <img class="stor-locky" src="img/lettet-locky.png">
             <p class="stor-talebobl">Phew... Det var godt!</p>
         </div>
         <div class="btn-group">
@@ -106,7 +108,7 @@
 
     <!-- Trin 2b: Aldrig del personlige oplysninger (God svar)-->
     <section id="trin2b" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/glad-locky.png">
         <h2>
             Vær forsigtig med infomation du giver ud!
         </h2>
@@ -132,7 +134,7 @@
     <!-- Trin 3A: Will Smith -->
     <section id="retning1" class="hidden">
         <div class="dialog">
-            <img class="lille-locky" src="img/Locky.png">
+            <img class="lille-locky" src="img/interessant-locky.png">
             <p class="talebobl">Will Smith skrev til dig! Gad vide hvordan han fandt dig...</p>
         </div> 
         <img class="scenarie" src="img/will-smith.png"> <!-- Billede af samtale -->
@@ -152,9 +154,9 @@
 
     <!-- Svar 2.1a: Bloker -->
     <section id="svar2a" class="hidden">
-        <div class="stor-dialog">
-            <img class="stor-locky" src="img/Locky.png">
-            <p class="stor-talebobl">Du har faktisk en hjerne!</p>
+        <div class="lodret">
+            <img class="stor-locky" src="img/glad-locky.png">
+            <p class="stor-talebobl">Godt valg!</p>
         </div>
         <div class="btn-group">
             <button id="forsæt2a">Forsæt</button>
@@ -163,7 +165,7 @@
 
     <!-- Trin 3a: Aldrig klik på besynderlige links... (God svar) -->
     <section id="trin3a" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/glad-locky.png">
         <h2>
             Aldrig klik på mistænkelige links! ALDRIG!
         </h2>
@@ -185,7 +187,7 @@
     <section id="konklusion1" class="hidden">
         <h2 class="neutral-konklusion-tekst">SLUT</h2>
         <h2 class="konklusion-feedback-tekst">Din konklusion:</h2>
-        <div class="stor-dialog">
+        <div class="lodret">
             <img class="neutral-slutning-billede" src="img/nogenlunde-sikker.png"> <!-- Konklusion Billede -->
             <h2 class="konklusion-feedback-tekst">Nogenlunde Sikker</h2>
         </div>
@@ -196,7 +198,7 @@
 
     <!-- Endelig feedback 1: Du er sikker! -->
     <section id="endelig-feedback1" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/usikker-locky.png">
         <h2 class="neutral-farve">
             Der er plads til forbedringer... Men ellers godt!
         </h2>
@@ -219,8 +221,8 @@
 
     <!-- Svar 2.1b: Klik på linket -->
     <section id="svar2b" class="hidden">
-        <div class="stor-dialog">
-            <img class="stor-locky" src="img/Locky.png">
+        <div class="lodret">
+            <img class="stor-locky" src="img/skuffet-locky.png">
             <p class="stor-talebobl">Nu du virkelig på spanden...</p>
         </div>
         <div class="btn-group">
@@ -230,7 +232,7 @@
 
     <!-- Trin 3b: Aldrig klik på besynderlige links... (God svar) -->
     <section id="trin3b" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/sur-locky.png">
         <h2>
             Aldrig klik på mistænkelige links! ALDRIG!
         </h2>
@@ -252,7 +254,7 @@
     <section id="konklusion2" class="hidden">
         <h2 class="dårlig-konklusion-tekst">SLUT</h2>
         <h2 class="konklusion-feedback-tekst">Din konklusion:</h2>
-        <div class="stor-dialog">
+        <div class="lodret">
             <img src="img/hjemløs.png" class="dårlig-slutning-billede"> <!-- Konklusion Billede -->
             <h2 class="konklusion-feedback-tekst">Hjemløs</h2>
         </div>
@@ -263,7 +265,7 @@
 
     <!-- Endelig feedback 1: Du er hjemløs! -->
     <section id="endelig-feedback2" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/skuffet-locky.png">
         <h2 class="forkert-farve">
             Din rejse var kort og skræmmende... -100 aura.
         </h2>
@@ -287,7 +289,7 @@
     <!-- Retning 2 - Antivirus -->
     <section id="retning2" class="hidden">
         <div class="dialog">
-            <img class="lille-locky" src="img/Locky.png">
+            <img class="lille-locky" src="img/usikker-locky.png">
             <p class="talebobl">Hov... Jeg fik vidst en pop-op... Må være en af mine ads...</p>
         </div> 
         <img class="scenarie" src="img/pop-op.png"> <!-- Billede af samtale -->
@@ -300,8 +302,8 @@
 
     <!-- Svar 3a: Det var det forkerte -->
     <section id="svar3a" class="hidden">
-        <div class="stor-dialog">
-            <img class="stor-locky" src="img/Locky.png">
+        <div class="lodret">
+            <img class="stor-locky" src="img/sur-locky.png">
             <p class="stor-talebobl">Hvad laver du?!</p>
         </div>
         <div class="btn-group">
@@ -312,7 +314,7 @@
     <!-- Svar 3a: Feedback -->
 
     <section id="feedback4a" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/skuffet-locky.png">
         <h2>
             Lad ikke pop-ops vinduer snyde dig!
         </h2>
@@ -336,7 +338,7 @@
     <!-- Konsekvense -->
     <section id="du-er-hacket" class="hidden">
         <div class="dialog">
-            <img class="lille-locky" src="img/Locky.png">
+            <img class="lille-locky" src="img/skuffet-locky.png">
             <p class="talebobl">Wow! Se hvad jeg sagde...</p>
         </div>
         <img src="img/hacket.png" class="margin-bottom scenarie"> <!-- Billede af samtale -->
@@ -349,7 +351,7 @@
     <section id="konklusion3" class="hidden">
         <h2 class="dårlig-konklusion-tekst">SLUT</h2>
         <h2 class="konklusion-feedback-tekst">Din konklusion:</h2>
-        <div class="stor-dialog">
+        <div class="lodret">
             <img class="dårlig-slutning-billede" src="img/total-hjemløs.png"> <!-- Konklusion Billede -->
             <h2>100% Fortabt</h2>
         </div>
@@ -360,7 +362,7 @@
     
     <!-- Endelig Feedback 3 -->
     <section id="endelig-feedback3" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/sur-locky.png">
         <h2 class="forkert-farve">
             Du fik den værste slutning! Du kunne ikke gøre det værre!
         </h2>
@@ -384,8 +386,8 @@
 
     <!-- Svar 3a: Det var det forkerte -->
     <section id="svar3b" class="hidden">
-        <div class="stor-dialog">
-            <img class="stor-locky" src="img/Locky.png">
+        <div class="lodret">
+            <img class="stor-locky" src="img/lettet-locky.png">
             <p class="stor-talebobl">Gudskelov!</p>
         </div>
         <div class="btn-group">
@@ -396,7 +398,7 @@
     <!-- Svar 3a: Feedback -->
 
     <section id="feedback4b" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/glad-locky.png">
         <h2>
             Lad ikke pop-ops vinduer snyde dig!        
         </h2>
@@ -421,7 +423,7 @@
     <section id="konklusion4" class="hidden">
         <h2 class="god-konklusion-tekst">SLUT</h2>
         <h2 class="konklusion-feedback-tekst">Din konklusion:</h2>
-        <div class="stor-dialog">
+        <div class="lodret">
             <img class="god-slutning-billede" src="img/total-sikker.png" alt="100% Sikker"> <!-- Konklusion Billede -->
             <h2 class="konklusion-feedback-tekst">100% Sikker!</h2>
         </div>
@@ -432,7 +434,7 @@
     
     <!-- Endelig Feedback 4 -->
     <section id="endelig-feedback4" class="hidden">
-        <img class="lille-locky" src="img/Locky.png">
+        <img class="lille-locky" src="img/glad-locky.png">
         <h2 class="korrekt-farve">
             Du fik den bedste slutning!
         </h2>

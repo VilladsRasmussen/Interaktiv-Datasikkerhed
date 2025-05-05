@@ -45,8 +45,9 @@
             $overskrift: 4rem;
             $knap-tekst: 4rem;
             $lille-talebobl-tekst: 2.8rem;
-            $stor-talebobl-tekst: 4rem;
-            $paragraf-tekst: 2rem;
+            $stor-talebobl-tekst: 3.5rem;
+            $paragraf-tekst: 2.4rem;
+            $stor-paragraf-tekst: 3.2rem;
             $konklusion-tekst: 15rem;
             $konklusion-feedback-tekst: 5rem;
 
@@ -54,7 +55,7 @@
     $locky: "../img/locky.png";
 
     // 1.4 MARGINS
-    $margin-bottom: 3rem; // top right bottom left
+    $margin-bottom: 2rem; // top right bottom left
 
 
 // 2.  MIXINS        // Mixins til forskellige ting
@@ -68,14 +69,15 @@
         gap: 2rem;
     }
 
-    @mixin dialog-flexbox($direction: row, $justify: center) {
+    @mixin dialog-flexbox($direction: row, $justify: center, $align: center) {
         display: flex;
         flex-direction: $direction;
         justify-content: $justify;
+        align-items: $align;
         gap: 2rem;
     }
 
-    @mixin stor-dialog-flexbox($direction: column, $align: center) {
+    @mixin lodret-flexbox($direction: column, $align: center) {
         display: flex;
         flex-direction: $direction;
         align-items: $align;
@@ -107,26 +109,16 @@
         }
     }
 
-        // 2.2.1 - Input felter
-        @mixin input-felt($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
-            background-color: $farve;
-            color: $mørk-tekstfarve;
-            font-size: $paragraf-tekst;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            width: 70%;
-            font-family: $font;
-        }
-
     // 2.3 TALEBOBELER
-    @mixin talebobl($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
+    @mixin talebobl($farve: $knap-farve, $hover-farve: $knap-hover-farve, $font-size: $lille-talebobl-tekst) {
         background-color: $farve;
+        font-size: $font-size;
         color: $mørk-tekstfarve;
-        padding: 1rem 2rem;
+        padding: 1rem 3rem;
         width: auto;
+        height: auto;
         max-width: 300px;
+        max-height: 100px;
         border: none;
         display: flex;
         justify-content: center;
@@ -144,8 +136,15 @@
 
     // 2.5 KONKLUSIONS-BILLEDE
     @mixin konklusion-billede($border-color: $forkert-tekstfarve) {
-        max-width: 90%;
+        min-width: 300px;
+        max-width: 40%;
         height: auto;
         border: 5px solid $border-color;
         border-radius: 10px;
+    }
+
+// RESPONSIVT
+
+    @media (min-width: 768px) {
+         $overskrift: 5rem;
     }

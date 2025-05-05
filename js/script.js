@@ -37,6 +37,11 @@ const checkAnswer = (e) => {
             if (displayElement) {
                 displayElement.textContent = inputValue;
             }
+            // 1/2000 chance at vise omni-locky i stedet for normale locky
+            if (Math.random() < 1/2000) {
+                document.querySelector('#trin2 .stor-locky').src = 'img/omni-locky.png';
+                document.querySelector('#trin2 h2').textContent = `Are you sure? (Er det dit rigtige navn?)`;
+            }
         break;
 
 
@@ -44,9 +49,11 @@ const checkAnswer = (e) => {
     // VALG 1 - Indtastede du rigtige eller falsk navn?
         case 'rigtige': 
             document.querySelector('#svar1a').style.display = 'flex';
+            document.body.style.backgroundColor = '#380001';
         break;
         case 'falske': 
             document.querySelector('#svar1b').style.display = 'flex';
+            document.body.style.backgroundColor = '#00380C';
         break;
 
 
@@ -63,9 +70,11 @@ const checkAnswer = (e) => {
     // Feedback 1a og 1b
         case 'forsæt1aa': // Rettet fra 'fortsæt1a' til 'forsæt1a'
             document.querySelector('#retning1').style.display = 'flex';
+            document.body.style.backgroundColor = '#131928';
         break;
         case 'forsæt1bb': 
             document.querySelector('#retning2').style.display = 'flex';
+            document.body.style.backgroundColor = '#131928';
         break;
 
 
@@ -76,9 +85,11 @@ const checkAnswer = (e) => {
     // Retning 1 - Will Smith
         case 'bloker': 
             document.querySelector('#svar2a').style.display = 'flex';
+            document.body.style.backgroundColor = '#00380C';
         break;
         case 'klik': 
             document.querySelector('#svar2b').style.display = 'flex';
+            document.body.style.backgroundColor = '#380001';
         break;
 
 
@@ -93,6 +104,7 @@ const checkAnswer = (e) => {
     // Feedback 2a og 2b
         case 'slutning1': // Rettet fra 'fortsæt2a' til 'forsæt2a'
             document.querySelector('#konklusion1').style.display = 'flex';
+            document.body.style.backgroundColor = '#383400';
         break;
         case 'slutning2': 
             document.querySelector('#konklusion2').style.display = 'flex';
@@ -112,9 +124,11 @@ const checkAnswer = (e) => {
     // Retning 2 - Anti Virus
         case 'klik-knap': 
             document.querySelector('#svar3a').style.display = 'flex';
+            document.body.style.backgroundColor = '#380001';
         break;
         case 'ignorer': 
             document.querySelector('#svar3b').style.display = 'flex';
+            document.body.style.backgroundColor = '#00380C';
         break;
 
     // SVAR 3.1
