@@ -111,6 +111,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
     color: $lys-tekstfarve;
 }
 
+.til-venstre > p {
+    text-align: left;
+    margin-bottom: $margin-bottom;
+    }
 
 
         // 5.3 Talebobler

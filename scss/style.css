@@ -155,6 +155,11 @@ p {
   color: #F0F0F0;
 }
 
+.til-venstre > p {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
 .talebobl-tekst {
   font-size: 2.8rem;
   color: #F0F0F0;
