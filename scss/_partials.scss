@@ -61,7 +61,7 @@
 // 2.  MIXINS        // Mixins til forskellige ting
 
     // 2.1 FLEXBOX
-    @mixin mobil-flexbox($direction: column, $justify: center, $align: center) {
+    @mixin flexbox($direction: column, $justify: center, $align: center) {
         display: flex;
         flex-direction: $direction;
         justify-content: $justify;
@@ -101,6 +101,9 @@
         border-radius: 5px;
         border: none;
         width: 300px;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
         cursor: pointer;
         transition: background-color 0.3s ease-in-out;
 
@@ -118,12 +121,11 @@
         width: auto;
         height: auto;
         max-width: 300px;
-        max-height: 100px;
+        max-height: 100%;
         border: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
     }
 
     // 2.4 KONKLUSIONER

@@ -1,20 +1,17 @@
+// Importerer alle mixins, variabler og funktioner fra partials.scss
 @use 'partials' as *;
 
-// 3.  SEKTIONER        // Opstilling af sektioner vha. flexbox
-
-    // 3.1 Intro
-    section {
-        @include mobil-flexbox(column, center, center);
-        height: 100vh;
-        margin: 0 5% 0 5%; // top right bottom left
-    }
-
-
-// 4.  GRUNDLÆGGENDE    // Elememnter der er grundlæggende for HTML
+// 1.  GRUNDLÆGGENDE --- Opstilling af sektioner vha. flexbox
 
 body {
     transition: background-color 0.5s ease-in-out;
     background-color: $baggrundsfarve;
+}
+
+section {
+    @include flexbox(column, center, center);
+    height: 100vh;
+    margin: 0 5% 0 5%; // top right bottom left
 }
 
 input {
@@ -26,10 +23,13 @@ input {
     border: none;
     cursor: pointer;
     max-width: 300px;
-    font-family: $font;
     margin-bottom: $margin-bottom;
     font-size: $lille-talebobl-tekst;
 }
+
+
+
+// 2. TALEBOBLER --- Opstilling af talebobler
 
 .talebobl {
     @include talebobl($knap-farve, $knap-hover-farve);
@@ -41,46 +41,41 @@ input {
     font-size: $stor-talebobl-tekst;
 }
 
-    // 4.1 Dialoger
+    // 2.1 Flexbox til talebobler
 
-.dialog {
-    @include dialog-flexbox(row, center);
-    margin-bottom: 30px;
-}
+    .dialog {
+        @include dialog-flexbox(row, center);
+    }
 
-.lodret {
-    @include lodret-flexbox(column, center);
-    margin-bottom: 30px;
-}
-
-.btn-group {
-    @include button-group(column, center);
-}
-
-    // 4.2 Links
-    a {
-        color: $lys-tekstfarve;
-        text-decoration: none;
-        font-size: $paragraf-tekst;
+    .lodret {
+        @include lodret-flexbox(column, center);
+        margin-bottom: 30px;
     }
 
 
-// 5.  TEKSTER          // Konfigurering af tekster
+
+// 3.  TEKSTER --- Konfigurering af tekster
     
-h1, h2, h3, h4, h5, h6, p, span, a, button {
+h1, h2, h3, h4, h5, h6, p, span, a, button, input {
     font-family: $font;
 }
 
-        // 5.1 Overskrifter
+.til-venstre > p { // Sætter teksten til at starte ved venstre side.
+    text-align: left;
+    margin-bottom: $margin-bottom;
+    }
+
+        // 3.1 Overskrifter
         h2 {
             font-size: $overskrift;
             color: $lys-tekstfarve;
             text-align: center;
             margin: 0;
             font-weight: 100;
+         // NOTE: H1 bruges ikke da det typisk er dårlig practice at have flere af dem på en HTML
         }
-    
-        // 5.2 Paragrafer
+
+        // 3.2 Paragrafer
         p {
             font-size: $paragraf-tekst;
             color: $lys-tekstfarve;
@@ -88,7 +83,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
             margin: 0;
         }
     
-        // 5.3 Konklusioner
+        // 3.3 Konklusioner --- Giver forskellige farver og størrelse ud fra om det er en dårlig eller god slutning
 
         .dårlig-konklusion-tekst {
             @include konklusion-tekst($forkert-tekstfarve, $konklusion-tekst);
@@ -106,53 +101,29 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
             @include konklusion-tekst($color: $lys-tekstfarve, $font-size: $konklusion-feedback-tekst);
         }
 
-.slut-tekst {
-    font-size: $konklusion-tekst;
-    color: $lys-tekstfarve;
-}
+// 4.  BILLEDER --- Konfigurering af billeder
 
-.til-venstre > p {
-    text-align: left;
-    margin-bottom: $margin-bottom;
-    }
-
-
-        // 5.3 Talebobler
-        .talebobl-tekst {
-            font-size: $lille-talebobl-tekst;
-            color: $lys-tekstfarve;
-            text-align: center;
-            margin: 0;
-        }
-
-        .stor-talebobl-tekst {
-            font-size: $stor-talebobl-tekst;
-            color: $lys-tekstfarve;
-            text-align: center;
-            margin: 0;
-        }
-// 6.  BILLEDER          // Konfigurering af billeder
-
-    // 6.1 Stor-Locky
+    // 4.1 Forskellige størrelser til Locky
     .stor-locky {
         max-width: 30%;
         height: auto;
     }
 
     .lille-locky {
-        max-width: 20%;
+        max-width: 15%;
+        min-width: 100px;
         height: auto;
     }
 
-    // 6.2 Scenarier billeder
+    // 4.2 Scenarier billeder
     .scenarie {
         min-width: 300px;
         max-width: 40%;
         height: auto;
     }
 
-    // 6.3 Konklusioner billeder
 
+    // 4.3 Konklusioner billeder
     .dårlig-slutning-billede {
         @include konklusion-billede($forkert-tekstfarve);
     }
@@ -165,19 +136,11 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
         @include konklusion-billede($neutral-tekstfarve);
     }
 
-// 7.  KNAPPER            // Konfigurering af knapper
+// 5.  KNAPPER            // Konfigurering af knapper
 
-    // 7.1 Knapper
     button,
     a.knap {
         @include knap($knap-farve, $knap-hover-farve);
-        display: inline-block;
-        text-decoration: none;
-        text-align: center;
-    }
-
-    button:hover {
-        background-color: $knap-hover-farve;
     }
 
 // 8. FARVER           // Farvebrug
@@ -210,12 +173,16 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
     display: none;
 }
 
+.btn-group {
+    @include button-group(column, center);
+}
+
 // 11. MEDIA QUERY    // Responsivitet
 
 // 11.1 --- Til tablets
 @media (min-width: 768px) {
     section {
-        @include mobil-flexbox(column, center, center);
+        @include flexbox(column, center, center);
         height: 100vh;
         margin: 0 20% 0 20%; // top right bottom left
     }
@@ -225,12 +192,12 @@ h1, h2, h3, h4, h5, h6, p, span, a, button {
 // 11.2 --- Til computere
 @media (min-width: 1024px) {
     section {
-        @include mobil-flexbox(column, center, center);
+        @include flexbox(column, center, center);
         height: 100vh;
         margin: 0 20% 0 20%; // top right bottom left
     }
 
     .talebobl {
-        @include talebobl($knap-farve, $knap-hover-farve, $stor-talebobl-tekst);
+        @include talebobl($knap-farve, $knap-hover-farve, $lille-talebobl-tekst);
     }
 }

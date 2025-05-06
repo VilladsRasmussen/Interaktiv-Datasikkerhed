@@ -9,6 +9,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  transition: background-color 0.5s ease-in-out;
+  background-color: #131928;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -17,11 +22,6 @@ section {
   gap: 2rem;
   height: 100vh;
   margin: 0 5% 0 5%;
-}
-
-body {
-  transition: background-color 0.5s ease-in-out;
-  background-color: #131928;
 }
 
 input {
@@ -33,7 +33,6 @@ input {
   border: none;
   cursor: pointer;
   max-width: 300px;
-  font-family: "Jersey 10", sans-serif;
   margin-bottom: 2rem;
   font-size: 2.8rem;
 }
@@ -46,12 +45,11 @@ input {
   width: auto;
   height: auto;
   max-width: 300px;
-  max-height: 100px;
+  max-height: 100%;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   font-size: 2.8rem;
 }
 
@@ -63,12 +61,11 @@ input {
   width: auto;
   height: auto;
   max-width: 300px;
-  max-height: 100px;
+  max-height: 100%;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   font-size: 3.5rem;
 }
 
@@ -78,7 +75,6 @@ input {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 30px;
 }
 
 .lodret {
@@ -89,22 +85,13 @@ input {
   margin-bottom: 30px;
 }
 
-.btn-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-a {
-  color: #F0F0F0;
-  text-decoration: none;
-  font-size: 2.4rem;
-}
-
-h1, h2, h3, h4, h5, h6, p, span, a, button {
+h1, h2, h3, h4, h5, h6, p, span, a, button, input {
   font-family: "Jersey 10", sans-serif;
+}
+
+.til-venstre > p {
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -150,37 +137,14 @@ p {
   color: #F0F0F0;
 }
 
-.slut-tekst {
-  font-size: 15rem;
-  color: #F0F0F0;
-}
-
-.til-venstre > p {
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
-.talebobl-tekst {
-  font-size: 2.8rem;
-  color: #F0F0F0;
-  text-align: center;
-  margin: 0;
-}
-
-.stor-talebobl-tekst {
-  font-size: 3.5rem;
-  color: #F0F0F0;
-  text-align: center;
-  margin: 0;
-}
-
 .stor-locky {
   max-width: 30%;
   height: auto;
 }
 
 .lille-locky {
-  max-width: 20%;
+  max-width: 15%;
+  min-width: 100px;
   height: auto;
 }
 
@@ -223,18 +187,14 @@ a.knap {
   border-radius: 5px;
   border: none;
   width: 300px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
   display: inline-block;
   text-decoration: none;
   text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 button:hover,
 a.knap:hover {
-  background-color: #555555;
-}
-
-button:hover {
   background-color: #555555;
 }
 
@@ -262,6 +222,14 @@ button:hover {
   display: none;
 }
 
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 @media (min-width: 768px) {
   section {
     display: flex;
@@ -285,17 +253,16 @@ button:hover {
   }
   .talebobl {
     background-color: #FFFFFF;
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: #131928;
     padding: 1rem 3rem;
     width: auto;
     height: auto;
     max-width: 300px;
-    max-height: 100px;
+    max-height: 100%;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
   }
 }/*# sourceMappingURL=style.css.map */
